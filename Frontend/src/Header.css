@@ -42,7 +42,7 @@ nav {
 
 nav ul.topnav {
     margin: 0;
-    padding: 20px 5px;
+    padding: 20px 15px;
     list-style: none;
     display: flex;
     justify-content: space-between;

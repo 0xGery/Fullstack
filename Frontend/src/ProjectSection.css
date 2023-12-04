@@ -1,0 +1,68 @@
+nav, 
+header, 
+footer {
+    display: block;
+}
+
+body {
+    background-color: #1E1E1E;
+    line-height: 1;
+    margin: 0;
+    padding: 0; /* Remove default margin and padding */
+}
+
+.container {
+    width: 100%; /* Full width */
+    margin: auto;
+    padding-top: 4%; /* Adjust top padding to position the content from the top */
+    padding-bottom: 4%;
+}
+
+.row {
+    width: 100%; /* Full width of the container */
+    display: flex;
+    justify-content: center; /* Center the row content horizontally */
+}
+
+.project-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content of project-section horizontally */
+    text-align: center; /* Center the text inside the project items */
+}
+
+.project-types {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust the gap between items */
+}
+
+.project-type-title {
+    cursor: pointer;
+    color: #f2f2f2;
+    /* Add more styling as needed */
+}
+
+.project-type-title:hover {
+    text-decoration: underline; /* Example hover effect */
+}
+
+.project-item:hover {
+    background-color: #f2f2f2; /* Example hover effect */
+}
+
+.project-item {
+    display: flex;
+    margin-bottom: 20px;
+    align-self: center; /* Center the project item */
+    text-align: center;
+}
+
+.project-type-title.selected {
+    color: #FFD700; /* Change to your desired color */
+    text-decoration: underline; 
+}
+
+#sect-1{
+    background: linear-gradient(45deg, #1c2052, #410e6b, #502570);
+}

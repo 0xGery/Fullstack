@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const projectRoutes = require('./routes/Project');
 const app = express();
 const port = 3001; 
+const cors = require('cors');
 
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/0xGery', { useNewUrlParser: true, useUnifiedTopology: true });
@@ -14,7 +15,9 @@ app.use(express.json());
 app.get('/', (req, res) => res.send('Backend server is running!'));
 
 // Project routes
+app.use(cors());
 app.use('/api', projectRoutes);
 
 // Start the server
 app.listen(port, () => console.log(`Server running on port ${port}`));
+
