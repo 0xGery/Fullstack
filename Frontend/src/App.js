@@ -10,6 +10,7 @@ function App() {
   return (
       <div>
           <Header />
+          <Body />
           <ProjectList />
           <AddProjectForm />
           <Footer /> 
