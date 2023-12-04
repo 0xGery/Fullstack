@@ -15,7 +15,7 @@ function Header() {
         <header>
             <nav>
                 <ul className="topnav" id="Dropdown">
-                    <li><a href="#home">0xGery</a></li>
+                    <li><a href="#WelcomeSection">0xGery</a></li>
                     <li className="nav-center-group">
                         <a href="#Project">Project</a>
                         <a href="#Service">Service</a>

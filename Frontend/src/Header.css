@@ -8,7 +8,7 @@ body {
     background-color: #FFF;
     line-height: 1;
     margin: 0;
-    padding-top: 44px; /* Height of the navbar */
+    padding-top: 0; /* Height of the navbar */
 }
 
 /* Grid System */
@@ -37,12 +37,12 @@ nav {
     top: 0;
     width: 100%;
     z-index: 100; /* Ensures navbar is on top */
-    background-color: #36454F; /* Navbar background */
+    background-color: #410e6b94; /* Navbar background */
 }
 
 nav ul.topnav {
     margin: 0;
-    padding: 0;
+    padding: 20px 5px;
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -103,6 +103,7 @@ ul.topnav li.dropdownIcon {
         display: block;
         position: absolute;
         right: 0;
+        margin:20px 0;
         top: 0;
     }
 
