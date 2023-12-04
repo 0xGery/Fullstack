@@ -1,9 +1,20 @@
 const express = require('express');
-const app = express();
-const port = 3001; // Different from the React port
 const mongoose = require('mongoose');
+const projectRoutes = require('./routes/Project');
+const app = express();
+const port = 3001; 
 
-app.get('/', (req, res) => res.send('Hello World!'));
+// Connect to MongoDB
+mongoose.connect('mongodb://localhost:27017/0xGery', { useNewUrlParser: true, useUnifiedTopology: true });
 
+// Middleware to parse JSON requests
+app.use(express.json());
+
+// Test route
+app.get('/', (req, res) => res.send('Backend server is running!'));
+
+// Project routes
+app.use('/api', projectRoutes);
+
+// Start the server
 app.listen(port, () => console.log(`Server running on port ${port}`));
-mongoose.connect('mongodb://localhost:27017/Frontend', { useNewUrlParser: true, useUnifiedTopology: true });
