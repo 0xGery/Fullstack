@@ -2,7 +2,6 @@ import React from 'react';
 import './Header.css';
 
 function Header() {
-    // DropdownMenu function refactored for React
     function DropdownMenu() {
         var x = document.getElementById("Dropdown");
         if (x.className === "topnav") {

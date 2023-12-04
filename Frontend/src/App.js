@@ -5,12 +5,13 @@ import Header from './Header';
 import ProjectList from './ProjectList';
 import AddProjectForm from './AddProjectForm';
 import Footer from './Footer';
+import WelcomeSection from './WelcomeSection';
 
 function App() {
   return (
       <div>
           <Header />
-          <Body />
+          <WelcomeSection />
           <ProjectList />
           <AddProjectForm />
           <Footer /> 
