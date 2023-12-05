@@ -14,9 +14,9 @@ app.use(express.json());
 // Test route
 app.get('/', (req, res) => res.send('Backend server is running!'));
 
-// Project routes
-app.use(cors());
-app.use('/api', projectRoutes);
+app.use(cors()); // CORS middleware
+app.use('/api', projectRoutes); // API routes
+
 
 // Start the server
 app.listen(port, () => console.log(`Server running on port ${port}`));
