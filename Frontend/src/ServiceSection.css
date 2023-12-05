@@ -57,6 +57,23 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
 }
 
+.installation-link {
+    display: inline-block; /* Allows setting padding and margin */
+    background-color: #4CAF50; /* Example background color */
+    color: white; /* Text color */
+    padding: 10px 15px; /* Spacing inside the link */
+    margin: 10px 0; /* Spacing outside the link */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    text-decoration: none; /* Removes underline from the link */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.installation-link:hover {
+    background-color: #45a049; /* Slightly darker on hover for feedback */
+}
+
+
 /* Dropdown Styles */
 .dropdowns-container {
     display: flex;

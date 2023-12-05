@@ -60,21 +60,27 @@ function ServiceSection() {
                     </>
                 )}
                 {selectedServiceType === 'ChainService' && (
-                <>
-                    <div className="copy-link" onClick={() => copyToClipboard(service.Installation)}>
-                        Installation
-                    </div>
-                    <div>EndPoint:</div>
-                    <ul>
-                        {service.endPoints.map((endPoints, index) => (
-                            <li key={index} className="copy-link" onClick={() => copyToClipboard(endPoints)}>
-                                {endPoints}
-                            </li>
-                        ))}
-                    </ul>
-                    <img src={service.imageUrl} alt={`${service.chainName}`} />
-                </>
-            )}
+                    <>
+                       {service.Installation && (
+                        <a href={service.Installation} target="_blank" rel="noopener noreferrer" className="installation-link">
+                            Installation
+                        </a>
+                    )}
+                        <div>EndPoint:</div>
+                        {Array.isArray(service.endPoints) ? (
+                            <ul>
+                                {service.endPoints.map((endPoint, index) => (
+                                    <li key={index} className="copy-link" onClick={() => copyToClipboard(endPoint)}>
+                                        {endPoint}
+                                    </li>
+                                ))}
+                            </ul>
+                        ) : (
+                            <p>No endpoints available.</p>
+                        )}
+                        <img src={service.imageUrl} alt={`${service.chainName}`} />
+                    </>
+                )}
             </div>
         ));
     };
