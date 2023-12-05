@@ -19,8 +19,8 @@ function Header() {
                     <li className="nav-center-group">
                         <a href="#Project">Project</a>
                         <a href="#Service">Service</a>
-                        <a href="#Education">Education</a>
-                        <a href="#AboutMe">About Me</a>
+                        <a href="#Team">Team</a>
+                        <a href="#Documentation">Documentation</a>
                         <a href="#Contact">Contact</a>
                     </li>
                     <li className="topnav-right"><a href="#Connect">Connect</a></li>

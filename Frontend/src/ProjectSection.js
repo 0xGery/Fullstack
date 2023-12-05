@@ -52,11 +52,12 @@ function ProjectSection() {
     const getTypeClassName = (type) => {
         return selectedType === type ? "project-type-title selected" : "project-type-title";
     };
-    
+
     return (
         <div className='container' id="sect-1">
             <div className='row'>
                 <div className="project-section">
+                    <h2 className='Title'>Project List</h2>
                     <div className="project-types">
                         <h2 className={getTypeClassName('Past')} onClick={() => handleTypeClick('Past')}>Past Projects</h2>
                         <h2 className={getTypeClassName('Mainnet')} onClick={() => handleTypeClick('Mainnet')}>Mainnet</h2>

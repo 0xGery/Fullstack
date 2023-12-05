@@ -1,10 +1,18 @@
 // import logo from './logo.svg'; 
 import './App.css';
 import React from 'react';
+
+// Nav
 import Header from './Header';
-import ProjectSection from './ProjectSection';
-import Footer from './Footer';
+
+// Section
 import WelcomeSection from './WelcomeSection';
+import ProjectSection from './ProjectSection';
+import ServiceSection from './ServiceSection';
+
+// Footer
+import Footer from './Footer';
+
 
 function App() {
   return (
@@ -12,6 +20,7 @@ function App() {
           <Header />
           <WelcomeSection />
           <ProjectSection />
+          <ServiceSection />
           <Footer /> 
       </div>
   );

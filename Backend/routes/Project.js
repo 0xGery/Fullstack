@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const Project = require('../models/Project');
+const { Project, Service } = require('../models/Project.js');
 
-// Get all projects
+// Project Section
 router.get('/projects', async (req, res) => {
     try {
         const projects = await Project.find();
@@ -12,53 +12,45 @@ router.get('/projects', async (req, res) => {
     }
 });
 
-// Create a new project
-router.post('/projects', async (req, res) => {
-    const project = new Project({
-        name: req.body.name,
-        description: req.body.description,
-        type: req.body.type
-    });
+// Service
+/*
+router.get('/services', async (req, res) => {
+    console.log('Services route hit');
+    try {
+        const services = await Service.find();
+        console.log('Services from DB:', services); // Log data fetched from DB
+        res.json(services);
+    } catch (err) {
+        console.error('DB Error:', err.message); // Log any DB errors
+        res.status(500).json({ message: err.message });
+    }
+});
+*/
+
+router.get('/Service', async (req, res) => {
+    const { chainName, serviceType } = req.query;
+    
+    let query = {};
+    if (chainName) query.chainName = chainName;
+    if (serviceType) query.serviceType = serviceType;
 
     try {
-        const newProject = await project.save();
-        res.status(201).json(newProject);
+        const services = await Service.find(query); // Use Services model to find services
+        res.json(services);
     } catch (err) {
-        res.status(400).json({ message: err.message });
+        res.status(500).json({ message: err.message });
     }
 });
 
-// Update a project
-router.put('/projects/:id', async (req, res) => {
+// Fetch distinct chain names
+router.get('/chains', async (req, res) => {
+    console.log('Chains route hit');
     try {
-        const updatedProject = await Project.findByIdAndUpdate(
-            req.params.id,
-            req.body,
-            { new: true } // Returns the updated object
-        );
-
-        if (!updatedProject) {
-            return res.status(404).json({ message: "Project not found" });
-        }
-
-        res.json(updatedProject);
+        const chains = await Service.distinct('chainName');
+        console.log('Chains:', chains);
+        res.json(chains);
     } catch (err) {
-        res.status(400).json({ message: err.message });
-    }
-});
-
-// Delete a project
-router.delete('/projects/:id', async (req, res) => {
-    try {
-        const project = await Project.findById(req.params.id);
-
-        if (!project) {
-            return res.status(404).json({ message: "Project not found" });
-        }
-
-        await project.remove();
-        res.json({ message: "Project deleted successfully" });
-    } catch (err) {
+        console.error('Error in /chains:', err.message);
         res.status(500).json({ message: err.message });
     }
 });

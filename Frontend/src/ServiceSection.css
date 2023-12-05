@@ -1,0 +1,87 @@
+/* General Styles */
+body {
+    background-color: #1E1E1E;
+    color: #f2f2f2; /* Standard text color for better readability */
+    font-family: 'Arial', sans-serif; /* Use a standard font */
+    line-height: 1.5; /* Improve line spacing for readability */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px; /* Set a max-width for larger screens */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add padding around the content */
+}
+
+/* Service Item Styles */
+.service-item {
+    background-color: #333; /* Dark background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    margin-bottom: 20px; /* Space between items */
+    padding: 15px; /* Padding inside items */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.service-item:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* Enhanced shadow on hover */
+}
+
+.service-item h3 {
+    margin-bottom: 10px; /* Space below the title */
+    color: #FFD700; /* Golden color for titles */
+}
+
+.service-item p, .service-item a {
+    margin-bottom: 5px; /* Space between paragraphs and links */
+}
+
+.copy-link {
+    color: #4CAF50; /* Green color for clickable links */
+    cursor: pointer; /* Cursor changes to indicate clickability */
+    text-decoration: underline; /* Underline to signify it's a link */
+    margin-bottom: 5px;
+}
+
+.copy-link:hover {
+    color: #3B9C40; /* Darker green on hover */
+}
+
+.service-item img {
+    max-width: 100%; /* Full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px; /* Rounded corners */
+    margin-top: 10px; /* Space above the image */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
+}
+
+/* Dropdown Styles */
+.dropdowns-container {
+    display: flex;
+    justify-content: center; /* Center dropdowns */
+    margin-bottom: 20px;
+}
+
+.dropdowns-container select {
+    padding: 8px 12px;
+    margin-right: 10px;
+    border-radius: 4px;
+    background-color: #292929;
+    color: #FFFDD0;
+    border: 1px solid #555; /* Subtle border */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dropdowns-container {
+        flex-direction: column; /* Stack dropdowns vertically on smaller screens */
+        align-items: center;
+    }
+
+    .dropdowns-container select {
+        margin-bottom: 10px;
+        width: 100%; /* Full width for smaller screens */
+    }
+}
