@@ -4,7 +4,7 @@ const projectSchema = new mongoose.Schema({
     name: String,
     description: String,
     type: String, // e.g., 'Mainnet', 'Testnet'
-    // Add other relevant fields
+    imageUrl: String, // Add an imageUrl field
 });
 
 module.exports = mongoose.model('Project', projectSchema);
