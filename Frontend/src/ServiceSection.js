@@ -61,11 +61,16 @@ function ServiceSection() {
                 )}
                 {selectedServiceType === 'ChainService' && (
                     <>
-                       {service.Installation && (
-                        <a href={service.Installation} target="_blank" rel="noopener noreferrer" className="installation-link">
-                            Installation
-                        </a>
-                    )}
+                      <div className="service-detail">
+                        <span className="service-label">Installation:</span>
+                        {service.Installation ? (
+                            <a href={service.Installation} target="_blank" rel="noopener noreferrer" className="service-link">
+                                {service.Installation}
+                            </a>
+                        ) : (
+                            <span>Not Available</span>
+                        )}
+                       </div>
                         <div>EndPoint:</div>
                         {Array.isArray(service.endPoints) ? (
                             <ul>

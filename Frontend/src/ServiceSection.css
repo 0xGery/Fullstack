@@ -38,6 +38,26 @@ body {
     margin-bottom: 5px; /* Space between paragraphs and links */
 }
 
+.service-detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.service-label {
+    min-width: 150px; /* Ensures consistent width for labels */
+    font-weight: bold;
+}
+
+.service-link {
+    color: #007bff; /* Standard link color */
+    text-decoration: underline; /* Underline for clarity that it's a link */
+}
+
+.service-link:hover {
+    color: #0056b3; /* Darker color on hover */
+}
+
 .copy-link {
     color: #4CAF50; /* Green color for clickable links */
     cursor: pointer; /* Cursor changes to indicate clickability */
