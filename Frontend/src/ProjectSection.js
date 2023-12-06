@@ -54,8 +54,8 @@ function ProjectSection() {
     };
 
     return (
-        <div className='container' id="sect-1">
-            <div className='row'>
+        <div className='containerP' id="sect-1">
+            <div className='rowP'>
                 <div className="project-section">
                     <h2 className='Title'>Project List</h2>
                     <div className="project-types">

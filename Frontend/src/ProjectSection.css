@@ -11,14 +11,14 @@ body {
     padding: 0; /* Remove default margin and padding */
 }
 
-.container {
+.containerP {
     width: 100%; /* Full width */
     margin: auto;
     padding-top: 4%; /* Adjust top padding to position the content from the top */
     padding-bottom: 4%;
 }
 
-.row {
+.rowP {
     width: 100%; /* Full width of the container */
     display: flex;
     justify-content: center; /* Center the row content horizontally */
