@@ -102,7 +102,7 @@ ul.topnav li.dropdownIcon {
     nav ul.topnav > li.dropdownIcon {
         display: block;
         position: absolute;
-        right: 0;
+        right: 2vw;
         margin:20px 0;
         top: 0;
     }
@@ -114,7 +114,7 @@ ul.topnav li.dropdownIcon {
 
     nav ul.topnav.responsive > li.dropdownIcon {
         top: 0;
-        right: 0;
+        right: 2vw;
     }
 
     nav ul.topnav.responsive {

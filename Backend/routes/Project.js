@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const { Project, Service } = require('../models/Project.js');
+const { Project, Service, Team } = require('../models/Project.js');
+
+// const nodemailer = require('nodemailer');
 
 // Project Section
 router.get('/projects', async (req, res) => {
@@ -27,6 +29,8 @@ router.get('/services', async (req, res) => {
 });
 */
 
+
+// Service
 router.get('/Service', async (req, res) => {
     const { chainName, serviceType } = req.query;
     
@@ -54,5 +58,49 @@ router.get('/chains', async (req, res) => {
         res.status(500).json({ message: err.message });
     }
 });
+
+// Team Section
+router.get('/teams', async (req, res) => {
+    try {
+        const teams = await Team.find();
+        res.json(teams);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
+
+/*
+router.post('/send', async (req, res) => {
+    let { fullName, email, message } = req.body;
+
+    // Nodemailer setup
+    let transporter = nodemailer.createTransport({
+        service: 'gmail', // or your email service
+        auth: {
+            user: 'yourEmail@example.com', 
+            pass: 'yourEmailPassword' 
+        }
+    });
+
+    let mailOptions = {
+        from: email,
+        to: 'yourEmail@example.com', // your email to receive messages
+        subject: `New Message from ${fullName}`,
+        text: message
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.log(error);
+            res.status(500).send('Error');
+        } else {
+            console.log('Email sent: ' + info.response);
+            res.status(200).send('Success');
+        }
+    });
+});
+*/
+
 
 module.exports = router;

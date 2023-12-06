@@ -15,17 +15,17 @@ function Header() {
         <header>
             <nav>
                 <ul className="topnav" id="Dropdown">
-                    <li><a href="#WelcomeSection">0xGery</a></li>
+                    <li><a href="#welcome-section">0xGery</a></li>
                     <li className="nav-center-group">
-                        <a href="#Project">Project</a>
-                        <a href="#Service">Service</a>
-                        <a href="#Team">Team</a>
-                        <a href="#Documentation">Documentation</a>
-                        <a href="#Contact">Contact</a>
+                        <a href="#project-section">Project</a>
+                        <a href="#service-section">Service</a>
+                        <a href="#team-section">Team</a>
+                        <a href="#documentation-section">Documentation</a>
+                        <a href="#contact-section">Contact</a>
                     </li>
-                    <li className="topnav-right"><a href="#Connect">Connect</a></li>
+                    <li className="topnav-right"><a href="#connect-section">Connect</a></li>
                     <li className="dropdownIcon">
-                        <a href="javascript:void(0);" onClick={DropdownMenu}>&#9776;</a>
+                         <button onClick={DropdownMenu}>&#9776;</button>
                     </li>
                 </ul>
             </nav>

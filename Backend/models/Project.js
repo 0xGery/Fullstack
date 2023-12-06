@@ -14,11 +14,19 @@ const serviceSchema = new mongoose.Schema({
     chainTo: String,
     imageUrl: String,
     Installation: String,
-    endPoints: array,
+    endPoints: Array,
 });
 
+const teamSchema = new mongoose.Schema({
+    Name: String,
+    Role: String,
+    description: String,
+    imageUrl: String,
+})
+
 // Then create models using the schemas
+const Team = mongoose.model('Team', teamSchema, 'Teams');
 const Project = mongoose.model('Project', projectSchema);
 const Service = mongoose.model('Service', serviceSchema, 'Services');
 
-module.exports = { Project, Service };
+module.exports = { Project, Service, Team };

@@ -20,14 +20,15 @@ function App() {
   return (
       <div>
           <Header />
-          <WelcomeSection />
-          <ProjectSection />
-          <ServiceSection />
-          <TeamSection />
-          <ContactSection />
+          <div id="welcome-section"><WelcomeSection /></div>
+          <div id="project-section"><ProjectSection /></div>
+          <div id="service-section"><ServiceSection /></div>
+          <div id="team-section"><TeamSection /></div>
+          <div id="contact-section"><ContactSection /></div>
           <Footer /> 
       </div>
   );
 }
+
 
 export default App;
