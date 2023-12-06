@@ -9,6 +9,8 @@ import Header from './Header';
 import WelcomeSection from './WelcomeSection';
 import ProjectSection from './ProjectSection';
 import ServiceSection from './ServiceSection';
+import TeamSection from './TeamSection';
+import ContactSection from './ContactSection';
 
 // Footer
 import Footer from './Footer';
@@ -21,6 +23,8 @@ function App() {
           <WelcomeSection />
           <ProjectSection />
           <ServiceSection />
+          <TeamSection />
+          <ContactSection />
           <Footer /> 
       </div>
   );
