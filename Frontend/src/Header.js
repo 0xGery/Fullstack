@@ -23,7 +23,7 @@ function Header() {
                         <a href="#Documentation">Documentation</a>
                         <a href="#Contact">Contact</a>
                     </li>
-                    <li className="topnav-right"><a href="#connect-section">Connect</a></li>
+                    <li className="topnav-right"><a href="#connect-section">Connect Wallet</a></li>
                     <li className="dropdownIcon">
                          <button onClick={DropdownMenu}>&#9776;</button>
                     </li>
