@@ -7,7 +7,7 @@ function WelcomeSection() {
 
     return (
         <div class="container" id="sect-1">
-        <div class="row">
+        <div class="rowA">
             <div class="col-6"> 
                   <div class="leftSide-col">
                     <h1 class="large">For Community</h1>
