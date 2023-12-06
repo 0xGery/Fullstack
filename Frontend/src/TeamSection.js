@@ -26,7 +26,7 @@ function TeamSection() {
             <h2 className="our-team-title">Our Team</h2>
             <div className="row">
                 {teamMembers.map((member, index) => (
-                    <div key={member._id} className="col-12">
+                    <div key={member._id}>
                         <div className="card" onClick={() => handleCardClick(index)}>
                             <div className={`card__inner ${member.isFlipped ? 'is-flipped' : ''}`}>
                                 <div className="card__face card__face--front">
