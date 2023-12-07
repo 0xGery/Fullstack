@@ -6,8 +6,7 @@ const port = 3001;
 const cors = require('cors');
 
 // Connect to MongoDB
-const dbUsername = '0xGery'; // Replace with your MongoDB username
-const dbPassword = 'Ab1CdFo12'; // Replace with your MongoDB password
+
 const dbHost = '93.188.161.44';
 const dbName = '0xGery';
 const connectionString = `mongodb://${dbUsername}:${encodeURIComponent(dbPassword)}@${dbHost}:27017/${dbName}?authSource=admin`;
