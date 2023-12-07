@@ -5,7 +5,7 @@ function TeamSection() {
     const [teamMembers, setTeamMembers] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3001/api/teams') // Adjust the URL as per your setup
+        fetch('http://93.188.161.44:3001/api/teams') // Adjust the URL as per your setup
             .then(response => response.json())
             .then(data => setTeamMembers(data))
             .catch(error => console.error('Error:', error));

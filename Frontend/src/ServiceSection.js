@@ -8,7 +8,7 @@ function ServiceSection() {
     const [selectedServiceType, setSelectedServiceType] = useState('Relay');
 
     useEffect(() => {
-        fetch('http://localhost:3001/api/chains')
+        fetch('http://93.188.161.44:3001/api/chains')
             .then(response => response.json())
             .then(data => {
                 setChains(data);
@@ -23,7 +23,7 @@ function ServiceSection() {
         let query = `?serviceType=${serviceType}`;
         if (chainName) query += `&chainName=${chainName}`;
     
-        fetch(`http://localhost:3001/api/Service${query}`)
+        fetch(`http://93.188.161.44:3001/api/Service${query}`)
             .then(response => response.json())
             .then(data => setServices(data))
             .catch(error => console.error('Error fetching services:', error));
