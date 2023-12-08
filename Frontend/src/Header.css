@@ -52,7 +52,7 @@ nav {
 
 nav ul.topnav {
     flex-direction: column;
-    padding: 190px 0 0 60px;
+    padding: 190px 0 0 60px; /* Positioning Navbar */
     align-items: flex-start;
 }
 
@@ -63,26 +63,36 @@ nav ul.topnav li {
 
 nav ul.topnav li a {
     text-align: left;
+    position: relative;
     padding: 14px 20px; /* Adjust padding as needed */
     color: #FFFDD0;
     display: block;
+    text-decoration: none;
+    transition: font-weight 0.3s ease, text-decoration 0.3s ease; 
+
+}
+
+nav ul.topnav li a:hover::before,
+nav ul.topnav li a.selected::before {
+    content: '> ';
+    position: absolute;
+    left: 0;
+    color: #FFD700; /* Adjust the color as needed */
+    /* You can add more styling here if needed */
 }
 
 nav ul.topnav li a:hover,
 nav ul.topnav li a.selected {
-    text-decoration: solid;
-    color: #FFD700;
-    text-decoration: underline;
+    text-decoration: underline; /* Underline on hover and when selected */
+    color: #FFD700; /* Change color on hover and when selected */
 }
 
 ul.topnav li.dropdownIcon {
     display: none; /* Hide dropdown icon if not needed */
 }
 
-/* Responsive Design for Mobile Screens */
-/* ... existing styles ... */
 
-/* Responsive Design for Mobile Screens */
+/* Mobile Responsive */
 @media screen and (max-width: 680px) {
     nav {
         position: fixed;
@@ -102,7 +112,7 @@ ul.topnav li.dropdownIcon {
 
     nav ul.topnav li a {
         text-align: left;
-        padding: 14px 20px; /* Adjust padding as needed */
+        padding: 1.5vw 0 5vw 5vw; /* Adjust padding as needed */
         color: #FFFDD0;
         display: block;
     }
@@ -117,7 +127,7 @@ ul.topnav li.dropdownIcon {
         position: fixed; /* Fixed position to keep it stationary */
         left: 92vw;
         top: 0;
-        margin: 12px 0;
+        margin: 3.5vw;
         z-index: 101; /* Ensure it's above other elements */
     }
 
@@ -139,5 +149,3 @@ ul.topnav li.dropdownIcon {
         width: 100%; /* Full width */
     }
 }
-
-/* Additional styling as needed */
