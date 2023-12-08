@@ -43,7 +43,6 @@ function ProjectSection() {
                 <img src={project.imageUrl} alt={project.name} className="project-image" />
                 <h3>{project.name}</h3>
                 <p>{project.description}</p>
-                {/* Add more details about the project here */}
             </div>
         ));
     };

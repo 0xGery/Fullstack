@@ -25,23 +25,25 @@ label {
     font-size: 3rem; 
 }
 
-.container{
+.containerW{
     width: 100%;
     height: 900px;
     margin: auto;
     padding-top: 11%;
+    padding-left: 360px;
     padding-bottom: 4%;
 }
 
-.rowA{
+
+.rowW{
     width: 100%;
-    margin-top:160px;
+    margin-top:60px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
 
-.rowA::after{
+.rowW::after{
     display: table;
     clear: both;
     content: "";
@@ -126,4 +128,26 @@ h2.small {
     font-weight: 100;
     font-size: 20px;
     margin-left: 70%;
+}
+
+@media screen and (max-width: 680px) {
+    .containerW {
+        padding-left: 0; /* Remove left padding for mobile screens */
+    }
+
+    div.leftSide-col, div.rightSide-col {
+        margin-left: 0; /* Adjust margins for mobile layout */
+    }
+
+    h1.large, h1.large2 {
+        font-size: 6vw; /* Adjust font size for smaller screens */
+        margin-left: 0; /* Reset left margin */
+        text-align: center; /* Center align the text */
+    }
+
+    h2.small {
+        margin-left: 0; /* Reset left margin */
+    }
+
+    /* Adjust any other necessary styles for mobile layout */
 }

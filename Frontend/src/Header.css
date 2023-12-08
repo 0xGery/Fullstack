@@ -1,6 +1,10 @@
 /* Basic Reset */
 nav, header, footer {
     display: block;
+    background: #1e1e1e;
+    font-family: monospace;
+    font-size: medium;
+    line-height: 1vw;
 }
 
 /* Body Styles */
@@ -12,21 +16,21 @@ body {
 }
 
 /* Grid System */
-.container {
+.containerH {
     width: 100%;
     margin: auto;
     padding-top: 4%;
     padding-bottom: 4%;
 }
 
-.row {
+.rowH {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
 
-.row::after {
+.rowH::after {
     content: "";
     display: table;
     clear: both;
@@ -35,76 +39,94 @@ body {
 nav {
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 0; /* Position nav on the right side */
+    height: 100%; /* Full height */
+    width: 360px; /* Width of the sidebar */
+    background-color: #1e1e1e;
     z-index: 100; /* Ensures navbar is on top */
-    background-color: #410e6b94; /* Navbar background */
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: flex-start;
+    padding: 0; /* Spacing at the top */
 }
 
 nav ul.topnav {
-    margin: 0;
-    padding: 20px 15px;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
-}
-
-nav ul.topnav > li:first-child {
-    margin-right: auto;
-}
-
-.nav-center-group {
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
-}
-
-.nav-center-group a {
-    padding: 0;
-}
-
-nav ul.topnav > li:last-child {
-    margin-left: auto;
+    flex-direction: column;
+    padding: 190px 0 0 60px;
+    align-items: flex-start;
 }
 
 nav ul.topnav li {
-    list-style: none;
+    display: block; /* Display items in a block (vertical) */
+    width: 100%; /* Full width */
 }
 
 nav ul.topnav li a {
-    display: block;
-    text-decoration: none;
-    padding: 14px;
-    text-align: center;
+    text-align: left;
+    padding: 14px 20px; /* Adjust padding as needed */
     color: #FFFDD0;
-    text-transform: capitalize;
+    display: block;
 }
 
-nav ul.topnav li a:hover {
-    background-color: #4682B4;
+nav ul.topnav li a:hover,
+nav ul.topnav li a.selected {
+    text-decoration: solid;
+    color: #FFD700;
+    text-decoration: underline;
 }
 
 ul.topnav li.dropdownIcon {
-    display: none;
+    display: none; /* Hide dropdown icon if not needed */
 }
 
-/* Responsive Design */
+/* Responsive Design for Mobile Screens */
+/* ... existing styles ... */
+
+/* Responsive Design for Mobile Screens */
 @media screen and (max-width: 680px) {
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%; /* Full width for smaller screens */
+        height: auto;
+        background-color: #1e1e1e; /* Background color */
+    }
+
     nav ul.topnav {
         flex-direction: column;
         align-items: flex-start;
+        padding: 0;
+        margin-top: 20px; /* Provide space for the dropdown icon */
     }
 
-    nav ul.topnav > li:not(:first-child):not(.dropdownIcon) {
-        display: none;
+    nav ul.topnav li a {
+        text-align: left;
+        padding: 14px 20px; /* Adjust padding as needed */
+        color: #FFFDD0;
+        display: block;
+    }
+
+    nav ul.topnav > li:not(:first-child):not(.dropdownIcon),
+    nav ul.topnav.responsive > li:not(:first-child) {
+        display: none; /* Initially hide menu items */
     }
 
     nav ul.topnav > li.dropdownIcon {
         display: block;
-        position: absolute;
-        right: 2vw;
-        margin:20px 0;
+        position: fixed; /* Fixed position to keep it stationary */
+        left: 92vw;
         top: 0;
+        margin: 12px 0;
+        z-index: 101; /* Ensure it's above other elements */
+    }
+
+    nav ul.topnav.responsive {
+        position: relative;
+    }
+
+    nav ul.topnav.responsive > li.dropdownIcon {
+        right: 2vw; /* Adjust position as needed */
     }
 
     nav ul.topnav.responsive li a {
@@ -112,23 +134,10 @@ ul.topnav li.dropdownIcon {
         display: block;
     }
 
-    nav ul.topnav.responsive > li.dropdownIcon {
-        top: 0;
-        right: 2vw;
-    }
-
-    nav ul.topnav.responsive {
-        position: relative;
-    }
-
     nav ul.topnav.responsive > li:not(:first-child) {
         display: block; /* Show the list items */
-        margin-left: 2vw;
-        float: none; /* Full width */
-    }
-
-    nav ul.topnav.responsive > li:not(:first-child) a {
-        display:block;
-        text-align: left;
+        width: 100%; /* Full width */
     }
 }
+
+/* Additional styling as needed */

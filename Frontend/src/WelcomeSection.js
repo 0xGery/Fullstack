@@ -6,8 +6,8 @@ function WelcomeSection() {
     const logoUrl = 'https://raw.githubusercontent.com/0xGery/Fullstack/main/Frontend/src/Assets/Logo.svg';
 
     return (
-        <div class="container" id="sect-1">
-        <div class="rowA">
+        <div class="containerW" id="sect-1">
+        <div class="rowW">
             <div class="col-6"> 
                   <div class="leftSide-col">
                     <h1 class="large">For Community</h1>
