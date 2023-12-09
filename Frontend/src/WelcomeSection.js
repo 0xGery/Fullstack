@@ -6,13 +6,12 @@ function WelcomeSection() {
     const logoUrl = 'https://raw.githubusercontent.com/0xGery/Fullstack/main/Frontend/src/Assets/Logo.svg';
 
     return (
-        <div class="containerW" id="sect-1">
+        <div class="containerW" id="sect-w">
         <div class="rowW">
             <div class="col-6"> 
                   <div class="leftSide-col">
-                    <h1 class="large">For Community</h1>
-                    <h1 class="large2">From Community</h1>
-                    <h2 class="small">By 0xGery</h2>
+                    <h1 class="large">0xGERY</h1>
+                    <h1 class="large2">A Professional team specialized on Blockchain Architecture, we help community to understand more Blockchain Architerture and we help projects to connect with community </h1>
                   </div>
             </div>
             <div class="col-6">
