@@ -7,7 +7,7 @@ function ProjectSection() {
 
     useEffect(() => {
         // Fetch data from your API
-        fetch('http://93.188.161.44:3001/api/projects')
+        fetch('https://api.0xgery.xyz/api/projects')
             .then(response => {
                 // Check if the request was successful
                 if (!response.ok) {

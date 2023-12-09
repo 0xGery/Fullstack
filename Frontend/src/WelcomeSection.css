@@ -150,9 +150,6 @@ div.Icon img{
 }
 
 
-
-/* ... existing styles ... */
-
 @media screen and (max-width: 680px) {
     .containerW {
         padding-left: 0; /* Remove left padding for mobile screens */
