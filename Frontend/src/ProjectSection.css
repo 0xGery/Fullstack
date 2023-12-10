@@ -16,6 +16,7 @@ nav, header, footer {
     margin: auto;
     padding-top: 4%;
     padding-bottom: 4%;
+    padding-left: 360px;
 }
 
 /* Row */
@@ -24,6 +25,9 @@ nav, header, footer {
     justify-content: center;
 }
 
+h2.project-type-title{
+    font-weight: 200;
+}
 /* Title */
 .Title {
     color: #f2f2f2;
@@ -109,7 +113,7 @@ nav, header, footer {
 
 /* Background Gradient */
 #sect-P {
-    background: linear-gradient(45deg, #1c2052, #410e6b, #502570);
+    background: #2f2f2f;
 }
 
 /* Responsive Design */

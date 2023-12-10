@@ -52,7 +52,7 @@ nav {
 
 nav ul.topnav {
     flex-direction: column;
-    padding: 190px 0 0 60px; /* Positioning Navbar */
+    padding: 50% 0 0 40%;
     align-items: flex-start;
 }
 
@@ -90,7 +90,6 @@ nav ul.topnav li a.selected {
 ul.topnav li.dropdownIcon {
     display: none; /* Hide dropdown icon if not needed */
 }
-
 
 /* Mobile Responsive */
 @media screen and (max-width: 680px) {

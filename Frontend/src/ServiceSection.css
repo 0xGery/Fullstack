@@ -11,6 +11,7 @@ body {
     max-width: 100%; /* Set a max-width for larger screens */
     margin: 0 auto; /* Center the container */
     padding: 20px; /* Add padding around the content */
+    padding-left: 360px;
 }
 
 /* Service Item Styles */

@@ -1,12 +1,27 @@
+.containerC{
+        width: 100%;
+        margin: auto;
+        padding-top: 4%;
+        padding-left: 360px;
+}
+
 .contact-section {
     text-align: center;
     padding: 20px;
-    background-color: #f5f5f5; /* Adjust background color as needed */
+    background-color: #1e1e1e; /* Adjust background color as needed */
     color: #333;
 }
 
 .contact-section h2 {
     margin-bottom: 10px;
+}
+
+.cp{
+    font-family: monospace;
+    font-size: medium;
+    text-align: end;
+    color: #FFFDD0;
+    padding-left: 360px;
 }
 
 .contact-buttons a {

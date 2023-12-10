@@ -3,6 +3,7 @@ import './ContactSection.css'; // Make sure to create this CSS file for styling
 
 function ContactSection() {
     return (
+        <div className='containerC'>
         <div className="contact-section">
             <h2>Contact Us</h2>
             <p>If you have any questions, feel free to reach out to us!</p>
@@ -14,6 +15,9 @@ function ContactSection() {
                     Send an Email
                 </a>
             </div>
+           
+        </div>
+        <p className='cp'>© 2023 0xGery. All Right reserved.</p>
         </div>
     );
 }

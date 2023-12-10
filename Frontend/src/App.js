@@ -27,7 +27,6 @@ function App() {
           <div id="Team"><TeamSection /></div>
           <div id="Documentation"><DocSection /></div>
           <div id="Contact"><ContactSection /></div>
-          <Footer /> 
       </div>
   );
 }
