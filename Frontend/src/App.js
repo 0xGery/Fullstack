@@ -10,7 +10,6 @@ import WelcomeSection from './WelcomeSection';
 import ProjectSection from './ProjectSection';
 import ServiceSection from './ServiceSection';
 import TeamSection from './TeamSection';
-import DocSection from './DocSection'
 import ContactSection from './ContactSection';
 
 // Footer
@@ -25,7 +24,6 @@ function App() {
           <div id="Project"><ProjectSection /></div>
           <div id="Service"><ServiceSection /></div>
           <div id="Team"><TeamSection /></div>
-          <div id="Documentation"><DocSection /></div>
           <div id="Contact"><ContactSection /></div>
       </div>
   );

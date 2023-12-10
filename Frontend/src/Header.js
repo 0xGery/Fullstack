@@ -26,8 +26,8 @@ function Header() {
                         <a href="#Project" onClick={() => handleNavLinkClick('Project')} className={activeLink === 'Project' ? 'selected' : ''}>Project</a>
                         <a href="#Service" onClick={() => handleNavLinkClick('Service')} className={activeLink === 'Service' ? 'selected' : ''}>Service</a>
                         <a href="#Team" onClick={() => handleNavLinkClick('Team')} className={activeLink === 'Team' ? 'selected' : ''}>Team</a>
-                        <a href="#Documentation" onClick={() => handleNavLinkClick('Documentation')} className={activeLink === 'Documentation' ? 'selected' : ''}>Documentation</a>
                         <a href="#Contact" onClick={() => handleNavLinkClick('Contact')} className={activeLink === 'Contact' ? 'selected' : ''}>Contact</a>
+                        <a href="#Documentation" onClick={() => handleNavLinkClick('Documentation')} className={activeLink === 'Documentation' ? 'selected' : ''}>Documentation</a>
                     </li>
                     <li className="topnav-right"><a href="#connect-section" onClick={() => handleNavLinkClick('ConnectWallet')} className={activeLink === 'ConnectWallet' ? 'selected' : ''}>Connect Wallet</a></li>
                     <li className="dropdownIcon">
