@@ -3,7 +3,7 @@ import './ProjectSection.css';
 
 function ProjectSection() {
     const [projects, setProjects] = useState([]);
-    const [selectedType, setSelectedType] = useState('Mainnet'); // Set Mainnet as default
+    const [selectedType, setSelectedType] = useState('Past'); // Set Mainnet as default
 
     useEffect(() => {
         // Fetch data from your API
