@@ -83,7 +83,8 @@ h2.project-type-title{
     color: #f2f2f2;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: calc(33.333% - 20px);
-    max-width: 300px;
+    max-width: 130px;
+    max-height: 150px;
     margin: 10px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -106,7 +107,7 @@ h2.project-type-title{
 
 .project-image {
     width: 100%;
-    height: auto;
+    height: 50%;
     border-radius: 8px;
     margin-bottom: 10px;
 }
