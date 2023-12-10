@@ -35,7 +35,7 @@ function ProjectSection() {
     const renderProjects = (type) => {
         const filteredProjects = categorizeProjects(type);
         if (filteredProjects.length === 0) {
-            return <p>No projects available under the {type} category.</p>;
+            return <p className='NoProject'>No projects available under the {type} category.</p>;
         }
     
         return filteredProjects.map(project => (
@@ -58,7 +58,7 @@ function ProjectSection() {
                 <div className="project-section">
                     <h2 className='Title'>Project List</h2>
                     <div className="project-types">
-                        <h2 className={getTypeClassName('Past')} onClick={() => handleTypeClick('Past')}>Past Projects</h2>
+                        <h2 className={getTypeClassName('Past')} onClick={() => handleTypeClick('Past')}>Archived</h2>
                         <h2 className={getTypeClassName('Mainnet')} onClick={() => handleTypeClick('Mainnet')}>Mainnet</h2>
                         <h2 className={getTypeClassName('Testnet')} onClick={() => handleTypeClick('Testnet')}>Testnet</h2>
                         <h2 className={getTypeClassName('Upcoming')} onClick={() => handleTypeClick('Upcoming')}>Upcoming</h2>
