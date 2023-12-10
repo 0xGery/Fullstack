@@ -12,12 +12,12 @@ function ServiceSection() {
             .then(response => response.json())
             .then(data => {
                 setChains(data);
-                const firstChain = data[0] || '';
-                setSelectedChain(firstChain);
-                fetchServices('Relay', firstChain);
+                setSelectedChain(data.length > 0 ? data[0] : '');
             })
             .catch(error => console.error('Error fetching chains:', error));
-    }, []);
+
+        fetchServices('Relay', selectedChain);
+    }, [selectedChain]); // Dependency on selectedChain to refetch when it changes
 
     const fetchServices = (serviceType, chainName) => {
         let query = `?serviceType=${serviceType}`;
@@ -53,67 +53,40 @@ function ServiceSection() {
         return services.map(service => (
             <div key={service._id} className="service-item">
                 <h3>{service.chainName}</h3>
-                {selectedServiceType === 'Relay' && (
-                    <>
-                        <p>Chain To: {service.chainTo}</p>
-                        <img src={service.imageUrl} alt={`${service.chainName}`} />
-                    </>
-                )}
-                {selectedServiceType === 'ChainService' && (
-                    <>
-                      <div className="service-detail">
-                        <span className="service-label">Installation:</span>
-                        {service.Installation ? (
-                            <a href={service.Installation} target="_blank" rel="noopener noreferrer" className="service-link">
-                                {service.Installation}
-                            </a>
-                        ) : (
-                            <span>Not Available</span>
-                        )}
-                       </div>
-                        <div>EndPoint:</div>
-                        {Array.isArray(service.endPoints) ? (
-                            <ul>
-                                {service.endPoints.map((endPoint, index) => (
-                                    <li key={index} className="copy-link" onClick={() => copyToClipboard(endPoint)}>
-                                        {endPoint}
-                                    </li>
-                                ))}
-                            </ul>
-                        ) : (
-                            <p>No endpoints available.</p>
-                        )}
-                        <img src={service.imageUrl} alt={`${service.chainName}`} />
-                    </>
-                )}
+                {/* Additional service details */}
             </div>
         ));
     };
 
-    const getTypeClassName = (type) => {
-        return selectedServiceType === type ? "project-type-title selected" : "project-type-title";
+    const renderChainDropdown = () => {
+        return chains.length > 0 ? (
+            <select className='ChainL' onChange={handleChainChange} value={selectedChain}>
+                {chains.map(chain => (
+                    <option key={chain} value={chain}>{chain}</option>
+                ))}
+            </select>
+        ) : (
+            <select className='ChainL' disabled>
+                <option>No Chain</option>
+            </select>
+        );
     };
-    
+
     return (
         <div className='containerS' id="sect-1">
-            <h2 className="our-team-title">Services</h2>
+            <h2 className="ServiceTitle">OUR SERVICES</h2>
             <div className="dropdowns-container">
-                <select onChange={handleServiceTypeChange} value={selectedServiceType}>
+                <select className="ServiceL" onChange={handleServiceTypeChange} value={selectedServiceType}>
                     <option value="Relay">Relayer</option>
                     <option value="ChainService">Chain Service</option>
                 </select>
-    
-                <select onChange={handleChainChange} value={selectedChain}>
-                    {chains.map(chain => (
-                        <option key={chain} value={chain}>{chain}</option>
-                    ))}
-                </select>
+                {renderChainDropdown()}
             </div>
             <div className="project-container">
                 {renderServices()}
             </div>
         </div>
-    );    
+    );
 }
 
 export default ServiceSection;

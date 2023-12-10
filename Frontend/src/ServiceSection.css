@@ -1,17 +1,49 @@
 /* General Styles */
 body {
     background-color: #1E1E1E;
-    color: #f2f2f2; /* Standard text color for better readability */
-    font-family: 'Arial', sans-serif; /* Use a standard font */
+    color: #f2f2f2;
+    font-family: monospace;
     margin: 0;
     padding: 0;
 }
 
 .containerS {
-    max-width: 100%; /* Set a max-width for larger screens */
-    margin: 0 auto; /* Center the container */
-    padding: 20px; /* Add padding around the content */
+    max-width: 100%;
     padding-left: 360px;
+    min-height: 37.5vw;
+}
+
+.ServiceTitle {
+    margin-top: 2%;
+    color: #f2f2f2;
+    font-family: monospace;
+    font-size: 2.7vw;
+    font-weight: 200;
+    text-align: center;
+}
+
+/* Dropdown Styles */
+.dropdowns-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.ServiceL, .ChainL {
+    padding: 8px 12px;
+    margin-right: 10px;
+    border-radius: 4px;
+    background-color: #292929;
+    color: #FFFDD0;
+    border: 1px solid #555;
+}
+
+.ChainL:disabled {
+    background-color: #444;
+    color: #AAA;
+    cursor: not-allowed;
 }
 
 /* Service Item Styles */
@@ -112,14 +144,28 @@ body {
 }
 
 /* Responsive Design */
+
 @media (max-width: 768px) {
     .dropdowns-container {
-        flex-direction: column; /* Stack dropdowns vertically on smaller screens */
+        flex-direction: column;
         align-items: center;
+    }
+
+    .ServiceL, .ChainL {
+        width: 100%;
+        margin-bottom: 10px;
     }
 
     .dropdowns-container select {
         margin-bottom: 10px;
         width: 100%; /* Full width for smaller screens */
+    }
+
+    .containerS {
+        padding-left: 20px;
+    }
+
+    .ServiceTitle {
+        font-size: 4vw;
     }
 }

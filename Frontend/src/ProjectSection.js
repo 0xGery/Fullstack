@@ -3,21 +3,27 @@ import './ProjectSection.css';
 
 function ProjectSection() {
     const [projects, setProjects] = useState([]);
-    const [selectedType, setSelectedType] = useState('Past'); // Set Mainnet as default
+    const [projectCounts, setProjectCounts] = useState({ total: 0, Past: 0, Mainnet: 0, Testnet: 0, Upcoming: 0 });
+    const [selectedType, setSelectedType] = useState('Past'); 
 
     useEffect(() => {
-        // Fetch data from your API
         fetch('https://api.0xgery.xyz/api/projects')
             .then(response => {
-                // Check if the request was successful
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 return response.json();
             })
             .then(data => {
-                // Set your state with the fetched data
                 setProjects(data);
+                // Calculate counts for each category
+                const counts = { total: data.length, Past: 0, Mainnet: 0, Testnet: 0, Upcoming: 0 };
+                data.forEach(project => {
+                    if (project.type in counts) {
+                        counts[project.type]++;
+                    }
+                });
+                setProjectCounts(counts);
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
@@ -46,22 +52,26 @@ function ProjectSection() {
             </div>
         ));
     };
-    
 
     const getTypeClassName = (type) => {
         return selectedType === type ? "project-type-title selected" : "project-type-title";
+    };
+
+    const renderCategoryCount = (count) => {
+        return count === 0 ? "N/A" : count;
     };
 
     return (
         <div className='containerP' id="sect-P">
             <div className='rowP'>
                 <div className="project-section">
-                    <h2 className='Title'>Project List</h2>
+                    <h2 className='Title'>SUPPORTED PROJECTS</h2>
+                    <p>Total Projects: {renderCategoryCount(projectCounts.total)}</p>
                     <div className="project-types">
-                        <h2 className={getTypeClassName('Past')} onClick={() => handleTypeClick('Past')}>Archived</h2>
-                        <h2 className={getTypeClassName('Mainnet')} onClick={() => handleTypeClick('Mainnet')}>Mainnet</h2>
-                        <h2 className={getTypeClassName('Testnet')} onClick={() => handleTypeClick('Testnet')}>Testnet</h2>
-                        <h2 className={getTypeClassName('Upcoming')} onClick={() => handleTypeClick('Upcoming')}>Upcoming</h2>
+                        <h2 className={getTypeClassName('Past')} onClick={() => handleTypeClick('Past')}>Archived ({renderCategoryCount(projectCounts.Past)})</h2>
+                        <h2 className={getTypeClassName('Mainnet')} onClick={() => handleTypeClick('Mainnet')}>Mainnet ({renderCategoryCount(projectCounts.Mainnet)})</h2>
+                        <h2 className={getTypeClassName('Testnet')} onClick={() => handleTypeClick('Testnet')}>Testnet ({renderCategoryCount(projectCounts.Testnet)})</h2>
+                        <h2 className={getTypeClassName('Upcoming')} onClick={() => handleTypeClick('Upcoming')}>Upcoming ({renderCategoryCount(projectCounts.Upcoming)})</h2>
                     </div>
                     <div className="project-container">
                         {selectedType && renderProjects(selectedType)}
