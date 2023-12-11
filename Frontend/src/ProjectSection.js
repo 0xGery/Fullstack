@@ -65,8 +65,8 @@ function ProjectSection() {
         <div className='containerP' id="sect-P">
             <div className='rowP'>
                 <div className="project-section">
-                    <h2 className='Title'>SUPPORTED PROJECTS</h2>
-                    <p>Total Projects: {renderCategoryCount(projectCounts.total)}</p>
+                    <h2 className='Title'>SUPPORTED NETWORK</h2>
+                    <h3 className='TotalP'>Total Network: {renderCategoryCount(projectCounts.total)}</h3>
                     <div className="project-types">
                         <h2 className={getTypeClassName('Past')} onClick={() => handleTypeClick('Past')}>Archived ({renderCategoryCount(projectCounts.Past)})</h2>
                         <h2 className={getTypeClassName('Mainnet')} onClick={() => handleTypeClick('Mainnet')}>Mainnet ({renderCategoryCount(projectCounts.Mainnet)})</h2>

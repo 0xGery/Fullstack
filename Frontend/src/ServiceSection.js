@@ -74,7 +74,10 @@ function ServiceSection() {
 
     return (
         <div className='containerS' id="sect-1">
-            <h2 className="ServiceTitle">OUR SERVICES</h2>
+             <div className='rowS'>
+            <div className='Service-section'>
+            <h2 className="TitleS">OUR SERVICES</h2>
+
             <div className="dropdowns-container">
                 <select className="ServiceL" onChange={handleServiceTypeChange} value={selectedServiceType}>
                     <option value="Relay">Relayer</option>
@@ -84,6 +87,8 @@ function ServiceSection() {
             </div>
             <div className="project-container">
                 {renderServices()}
+            </div>
+            </div>
             </div>
         </div>
     );

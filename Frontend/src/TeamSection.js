@@ -23,8 +23,10 @@ function TeamSection() {
 
     return (
         <div className="containerTeam">
-            <h2 className="our-team-title">Our Team</h2>
             <div className="rowT">
+            <div className='Team-section'>
+            <h2 className="TitleT">Our Team</h2>
+            <div className='TeamList'>
                 {teamMembers.map((member, index) => (
                     <div key={member._id}>
                         <div className="card" onClick={() => handleCardClick(index)}>
@@ -45,6 +47,8 @@ function TeamSection() {
                         </div>
                     </div>
                 ))}
+            </div>
+            </div>
             </div>
         </div>
     );
