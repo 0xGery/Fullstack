@@ -16,6 +16,7 @@ body {
 .rowS{
     display: flex;
     justify-content: center;
+    margin-top: 3%;
 }
 .Service-section {
     display: flex;

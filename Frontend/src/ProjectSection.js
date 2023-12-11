@@ -58,7 +58,7 @@ function ProjectSection() {
     };
 
     const renderCategoryCount = (count) => {
-        return count === 0 ? "N/A" : count;
+        return count === 0 ? "n/a" : count;
     };
 
     return (
