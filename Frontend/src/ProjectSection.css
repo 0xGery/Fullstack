@@ -82,8 +82,6 @@ h2.project-type-title{
     align-items: center;
     padding: 10px;
     border-radius: 8px;
-    height: 150px;
-    object-fit: cover;
     background-color: #292929;
     color: #f2f2f2;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
