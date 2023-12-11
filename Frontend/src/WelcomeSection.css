@@ -1,0 +1,190 @@
+:root{
+    --text: #FFFDD0;
+    --background: #2f2f2f;
+    --font-family: monospace;
+}
+
+nav, 
+header, 
+footer {
+    display: block;
+}
+
+
+body {
+    background-color: #1E1E1E;
+    line-height: 1;
+    margin: 0;
+}
+
+p {
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+article p{
+    font-size: 35px;
+    padding: 10px;
+}
+
+label {
+    font-size: 3rem; 
+}
+
+.containerW{
+    width: 100%;
+    height: 900px;
+    margin: auto;
+    padding-left: 360px;
+    padding-bottom: 4%;
+}
+
+
+.rowW{
+    width: 100%;
+    margin-top:0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rowW::after{
+    display: table;
+    clear: both;
+    content: "";
+}
+
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;
+margin-bottom: 100%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}/* Additional styling as needed */
+
+* {
+    box-sizing: border-box;
+    padding:0;
+    margin: 0;
+}
+
+#sect-w{
+    background: var(--background);
+}
+
+div.leftSide-col{
+    margin-left:10%;
+    margin-top:4vw;
+}
+
+div.rightSide-col{
+    margin-left: 10%;
+    margin-top: 10vw;
+}
+
+.imageA {
+    max-width: 100%;
+    height: auto;
+}
+
+
+h1.Project{
+    font-size: 65px;
+    text-align: center;
+}
+
+h1.large {
+    color: var(--background);
+    margin: 0 auto; /* Center the heading and remove side margins */
+    padding: 0.5vw 1vw; /* Adjust padding */
+    font-family: monospace;
+    background: var(--text);
+    font-weight: lighter;
+    font-size: 2.5vw; /* Adjust font size to be more responsive */
+    text-align: center; /* Center the text */
+    line-height: normal; /* Adjust line height for better readability */
+    word-wrap: break-word; /* Ensure long words do not overflow */
+    display: inline-block; /* Change display to handle background sizing */
+    max-width: 95%; /* Prevent it from taking full width */
+}
+
+h1.large2 {
+    color: var(--text);
+    font-family: monospace;
+    font-weight: lighter;
+    margin-top: 100px;
+    font-size: 1vw;
+    line-height: 1.5vw;
+    text-align: justify;
+}
+
+h2.small {
+    color:#502570;
+    font-weight: 100;
+    font-size: 20px;
+    margin-left: 70%;
+}
+
+h1.Project {
+    font-size: 4vw; /* Adjust the value as needed */
+}
+
+
+div.box {
+    text-align: center;
+    margin: 24px;
+    padding: 24px 24px 40px 24px;
+    border-radius: 7px;
+    background-color: #fff;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .15), 0 2px 3px 0 rgba(0, 0, 0, .1);
+}
+div.Icon img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+@media screen and (max-width: 680px) {
+    .containerW {
+        padding-left: 0; /* Remove left padding for mobile screens */
+        padding-top: 5%; /* Adjust top padding for mobile screens */
+        height: auto; /* Adjust height for mobile screens */
+    }
+
+    .rowW {
+        margin-top: 10px; /* Adjust top margin for mobile layout */
+    }
+
+    .col-6 {
+        width: 100%; /* Full width for columns on mobile screens */
+    }
+
+    div.leftSide-col, div.rightSide-col {
+        margin-left: 0; /* Adjust margins for mobile layout */
+    }
+
+    h1.large, h1.large2 {
+        font-size: 8vw; /* Adjust font size for smaller screens */
+        margin-left: 0; /* Reset left margin */
+        text-align: center; /* Center align the text */
+        line-height: normal; /* Adjust line height for better readability */
+    }
+
+    h2.small {
+        font-size: 5vw; /* Adjust font size for smaller screens */
+        margin-left: 0; /* Reset left margin */
+        text-align: center; /* Center align the text */
+    }
+
+    /* Adjustments for images */
+    .imageA {
+        display: none;
+    }
+
+}
