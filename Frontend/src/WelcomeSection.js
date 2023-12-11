@@ -2,7 +2,7 @@ import React from 'react';
 import './WelcomeSection.css';
 
 function WelcomeSection() {
-    const logoUrl = 'https://raw.githubusercontent.com/0xGery/Fullstack/main/Frontend/src/Assets/Logo.svg';
+    const logoUrl = '';
 
     return (
         <div class="containerW" id="sect-w">
