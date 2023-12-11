@@ -21,7 +21,7 @@ function Header() {
         <header>
             <nav>
                 <ul className="topnav" id="Dropdown">
-                    <li><a href="#Welcome" onClick={() => handleNavLinkClick('Welcome')} className={activeLink === 'Welcome' ? 'selected' : ''}>0xGery</a></li>
+                    <li><a href="#Welcome" onClick={() => handleNavLinkClick('Welcome')} className={activeLink === 'Welcome' ? 'selected' : ''}>NoctureNode</a></li>
                     <li className="nav-center-group">
                         <a href="#Project" onClick={() => handleNavLinkClick('Project')} className={activeLink === 'Project' ? 'selected' : ''}>Project</a>
                         <a href="#Service" onClick={() => handleNavLinkClick('Service')} className={activeLink === 'Service' ? 'selected' : ''}>Service</a>
