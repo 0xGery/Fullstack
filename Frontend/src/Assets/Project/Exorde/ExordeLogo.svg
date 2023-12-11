@@ -1,1 +1,13 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288.44 400"><defs><style>.cls-1{fill:#eb712a;}.cls-2{fill:#fff;}.cls-3{fill:none;}</style></defs><polygon class="cls-1" points="100.02 394.1 5.1 394.1 5.1 8.62 100.02 8.62 100.02 201.36 100.02 394.1"/><polygon class="cls-2" points="285.1 238.65 285.1 394.1 117.06 394.1 285.1 238.65"/><polygon class="cls-2" points="285.1 164.07 285.1 8.62 117.06 8.62 285.1 164.07"/><rect class="cls-3" width="288.44" height="400"/></svg>
+<svg width="1530" height="1530" viewBox="0 0 1530 1530" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="765" cy="765" r="765" fill="black"/>
+<g clip-path="url(#clip0_170_68)">
+<path d="M651.604 1262.87H408.084V274.11H651.604V768.488V1262.87Z" fill="#EB712A"/>
+<path d="M1126.43 864.137V1262.87H695.32L1126.43 864.137Z" fill="white"/>
+<path d="M1126.43 672.84V274.11H695.32L1126.43 672.84Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_170_68">
+<rect width="740" height="1026" fill="white" transform="translate(395 252)"/>
+</clipPath>
+</defs>
+</svg>

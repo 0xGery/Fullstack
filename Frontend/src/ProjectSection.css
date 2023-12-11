@@ -87,10 +87,12 @@ h2.project-type-title{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: calc(33.333% - 20px);
     max-width: 130px;
-    max-height: 150px;
+    min-width: 130px; /* Adjusted minimum width */
     margin: 10px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    min-height: 180px; /* Adjusted minimum height */
 }
+
 
 .NoProject {
     color: #000000; /* Example: Red color for the message */
@@ -109,7 +111,7 @@ h2.project-type-title{
 /* Project Item Content */
 .project-item h3 {
     font-size: 1.5em;
-    margin-bottom: 10px;
+    margin-bottom: 15%;
 }
 
 .project-item p {
@@ -119,11 +121,12 @@ h2.project-type-title{
 
 .project-image {
     width: 100%;
+    min-width: 100px; /* Set a minimum width */
     height: 50%;
+    min-height: 80px; /* Set a minimum height */
     border-radius: 8px;
     margin-bottom: 10px;
 }
-
 /* Background Gradient */
 #sect-P {
     background: #2f2f2f;
