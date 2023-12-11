@@ -5,8 +5,8 @@ function ContactSection() {
     return (
         <div className='containerC'>
         <div className="contact-section">
-            <h2>Contact Us</h2>
-            <p>If you have any questions, feel free to reach out to us!</p>
+            <h2 className='hContact'>Contact Us</h2>
+            <p className='pContact'>f you have any questions, feel free to reach out to us!</p>
             <div className="contact-buttons">
                 <a href="https://t.me/NullxGery" target="_blank" rel="noopener noreferrer" className="telegram-button">
                     Contact on Telegram
