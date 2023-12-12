@@ -118,7 +118,7 @@ h1.large2 {
     color: var(--text);
     font-family: monospace;
     font-weight: lighter;
-    margin-top: 100px;
+    margin-top: 15%;
     font-size: 1vw;
     line-height: 1.5vw;
     text-align: justify;
@@ -150,41 +150,53 @@ div.Icon img{
 }
 
 
-@media screen and (max-width: 680px) {
+@media only screen and (max-width: 680px) {
     .containerW {
-        padding-left: 0; /* Remove left padding for mobile screens */
-        padding-top: 5%; /* Adjust top padding for mobile screens */
-        height: auto; /* Adjust height for mobile screens */
+        padding-left: 20px; /* Adjusted for smaller screens */
+        padding-right: 20px; /* Added to prevent content from touching the edges */
+        height: auto; /* Height adjusted for content */
     }
 
     .rowW {
-        margin-top: 10px; /* Adjust top margin for mobile layout */
+        flex-direction: column; /* Stack columns vertically on small screens */
     }
 
     .col-6 {
-        width: 100%; /* Full width for columns on mobile screens */
+        width: 100%; /* Full width for small screens */
+        margin-bottom: 50px; /* Adjusted margin */
     }
 
-    div.leftSide-col, div.rightSide-col {
-        margin-left: 0; /* Adjust margins for mobile layout */
+    h1.large, h1.Project {
+        font-size: 5vw; /* Smaller font size for better readability */
+        text-align: left; /* Align text to the left */
     }
 
-    h1.large, h1.large2 {
-        font-size: 8vw; /* Adjust font size for smaller screens */
-        margin-left: 0; /* Reset left margin */
-        text-align: center; /* Center align the text */
-        line-height: normal; /* Adjust line height for better readability */
+    h1.large2 {
+        font-size: 3.5vw; /* Reduced font size for readability */
+        line-height: 5vw; /* Adjusted line height */
+        text-align: left; /* Align text to the left */
     }
 
     h2.small {
-        font-size: 5vw; /* Adjust font size for smaller screens */
-        margin-left: 0; /* Reset left margin */
-        text-align: center; /* Center align the text */
+        margin-left: 0; /* Align left */
+        font-size: 4vw; /* Reduce font size */
     }
 
-    /* Adjustments for images */
+    div.box {
+        margin: 12px; /* Adjusted margin */
+        padding: 12px 12px 20px 12px; /* Adjusted padding */
+    }
+
+    div.leftSide-col, div.rightSide-col {
+        margin-left: 0; /* Remove left margin */
+        margin-top: 20%; /* Adjust top margin */
+    }
+
     .imageA {
-        display: none;
+        display: none; /* Full width images */
     }
 
+    label, p, article p {
+        font-size: 5vw; /* Adjust font size for readability */
+    }
 }

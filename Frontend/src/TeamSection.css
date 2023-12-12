@@ -6,6 +6,7 @@
     padding-bottom: 4%;
     padding-left: 360px;
     font-family: monospace;
+    background-color: #707070;
 }
 
 .rowT {
@@ -46,6 +47,7 @@
   word-wrap: break-word; /* Ensure long words do not overflow */
   display: inline-block; /* Change display to handle background sizing */
   max-width: 95%; /* Prevent it from taking full width */
+  margin-bottom: 10%;
 }
 
 /* Styles for Member Name */
@@ -226,3 +228,56 @@
     border: 5px solid #FFF;
     object-fit: cover;
   }
+
+  /* Mobile Responsive Design for max-width 680px */
+@media (max-width: 680px) {
+  /* Adjust container padding for mobile */
+  .containerTeam {
+      padding-left: 20px; /* Reduced for smaller screens */
+      padding-right: 20px; /* Add right padding */
+  }
+
+  /* Adjust row for team section */
+  .rowT {
+      margin-top: 10px; /* Adjust top margin */
+  }
+
+  /* Adjust the team member card size and layout */
+  .card {
+      width: 80vw; /* Adjust width for mobile view */
+      height: auto; /* Height should be auto to accommodate content */
+      margin-left: 10vw; /* Center the card */
+      margin-right: 10vw; /* Center the card */
+      margin-top: 20px; /* Adjust top margin for spacing */
+  }
+
+  /* Adjust the title for smaller screens */
+  .TitleT {
+      font-size: 6vw; /* Increase size for better readability */
+      padding: 2vw; /* Adjust padding */
+  }
+
+  /* Adjust profile picture size */
+  .profilePict {
+      width: 50vw; /* Adjust width relative to viewport */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 50%; /* Make the image round */
+  }
+
+  /* Adjust name and role font size */
+  .memberName, .memberRole {
+      font-size: 5vw; /* Adjust font size for readability */
+  }
+
+  /* Adjust member description */
+  .memberdesc {
+      font-size: 4vw; /* Adjust font size */
+  }
+
+  /* Adjust card inner styles */
+  .card__inner {
+      transform-style: flat; /* Adjust for better performance */
+  }
+
+  /* Additional styling adjustments as needed */
+}

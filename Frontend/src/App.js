@@ -11,6 +11,7 @@ import ProjectSection from './ProjectSection';
 import ServiceSection from './ServiceSection';
 import TeamSection from './TeamSection';
 import ContactSection from './ContactSection';
+import RomanClock from './RomanClock';
 
 // Footer
 import Footer from './Footer';
@@ -21,6 +22,7 @@ function App() {
       <div>
           <Header />
           <div id="Welcome"><WelcomeSection /></div>
+          <RomanClock />
           <div id="Project"><ProjectSection /></div>
           <div id="Service"><ServiceSection /></div>
           <div id="Team"><TeamSection /></div>

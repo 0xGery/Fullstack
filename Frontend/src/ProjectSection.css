@@ -141,23 +141,51 @@ h2.project-type-title{
 }
 /* Background Gradient */
 #sect-P {
-    background: #2f2f2f;
+    background: #3a3a3a;
 }
 
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .project-item {
-        width: calc(50% - 20px);
+@media (max-width: 680px) {
+    /* Adjust container padding for mobile */
+    .containerP {
+        padding-left: 20px; /* Reduced for smaller screens */
+        padding-right: 20px; /* Add right padding */
     }
 
+    /* Adjust project item layout for smaller screens */
+    .project-item {
+        width: 100%; /* Full width for smaller screens */
+        min-width: 0; /* Remove minimum width constraint */
+        margin: 10px 0; /* Adjust margin for vertical spacing */
+    }
+
+    /* Adjust title for smaller screens */
     .Title {
-        font-size: 4vw; /* Adjust title size for better readability on smaller screens */
+        font-size: 6vw; /* Increase size for better readability */
+        padding: 1vw; /* Adjust padding */
     }
-}
 
-@media (max-width: 480px) {
-    .project-item {
-        width: 100%;
+    /* Adjust total projects display */
+    .TotalP {
+        font-size: 5vw; /* Adjust font size for readability */
     }
+
+    /* Adjust project type titles */
+    .project-type-title {
+        font-size: 5vw; /* Adjust font size for readability */
+    }
+
+    /* Adjust the size of project images */
+    .project-image {
+        height: auto; /* Adjust height to maintain aspect ratio */
+        min-height: 0; /* Remove minimum height constraint */
+    }
+
+    /* Adjust project description text */
+    .project-item h3, .project-item p {
+        font-size: 4vw; /* Adjust font size */
+    }
+
+    /* Additional styling adjustments as needed */
 }
