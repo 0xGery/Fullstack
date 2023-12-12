@@ -36,7 +36,6 @@ label {
     height: 900px;
     margin: auto;
     padding-left: 360px;
-    padding-bottom: 4%;
 }
 
 
@@ -60,7 +59,8 @@ label {
 .col-4 {width: 33.33%;}
 .col-5 {width: 41.66%;}
 .col-6 {width: 50%;
-margin-bottom: 100%;}
+margin-bottom: 100%;
+align-self: center;}
 .col-7 {width: 58.33%;}
 .col-8 {width: 66.66%;}
 .col-9 {width: 75%;}
@@ -83,15 +83,29 @@ div.leftSide-col{
     margin-top:4vw;
 }
 
-div.rightSide-col{
+.rightSide-col {
+    display: flex;
+    align-items: center; /* Align vertically */
+    height: 100%; /* Take full height of parent */
     margin-left: 10%;
     margin-top: 10vw;
+    margin-right: 10%;
 }
 
-.imageA {
-    max-width: 100%;
-    height: auto;
+
+.logo {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    display: inline-block; /* or block depending on your layout */
+    max-width: 100%; /* Adjust to your image's size */
+    height: auto; /* Maintain aspect ratio */
+    filter: grayscale(100%); /* Start in grayscale */
 }
+
+.logo:hover {
+    transform: scale(1.05); /* Gently increase the size */
+    filter: grayscale(0%); /* Return to full color */
+}
+
 
 
 h1.Project{
@@ -192,7 +206,7 @@ div.Icon img{
         margin-top: 20%; /* Adjust top margin */
     }
 
-    .imageA {
+    .logo {
         display: none; /* Full width images */
     }
 

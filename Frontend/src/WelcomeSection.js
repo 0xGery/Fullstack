@@ -2,7 +2,7 @@ import React from 'react';
 import './WelcomeSection.css';
 
 function WelcomeSection() {
-    const logoUrl = '';
+    const logoUrl = 'https://raw.githubusercontent.com/0xGery/Fullstack/main/Frontend/src/Assets/LogoA.svg';
 
     return (
         <div class="containerW" id="sect-w">
@@ -18,7 +18,7 @@ function WelcomeSection() {
             </div>
             <div class="col-6">
                 <div class="rightSide-col">
-                <img src={logoUrl} alt="Logo" className="imageA" />
+                <img src={logoUrl} alt="NoctureNode Logo" class="logo" />
                 </div>
             </div>
         </div>
