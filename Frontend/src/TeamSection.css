@@ -231,29 +231,32 @@
 
   /* Mobile Responsive Design for max-width 680px */
 @media (max-width: 680px) {
-  /* Adjust container padding for mobile */
+  
   .containerTeam {
-      padding-left: 20px; /* Reduced for smaller screens */
-      padding-right: 20px; /* Add right padding */
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
-  /* Adjust row for team section */
   .rowT {
-      margin-top: 10px; /* Adjust top margin */
+      margin-top: 10px; 
   }
 
-  /* Adjust the team member card size and layout */
   .card {
-      width: 80vw; /* Adjust width for mobile view */
-      height: auto; /* Height should be auto to accommodate content */
-      margin-left: 10vw; /* Center the card */
-      margin-right: 10vw; /* Center the card */
-      margin-top: 20px; /* Adjust top margin for spacing */
-  }
+    width: 80vw;
+    height: auto; 
+    margin-left: 10vw; 
+    margin-right: 10vw; 
 
-  /* Adjust the title for smaller screens */
+}
+
+.card__face {
+    width: 20vw;
+    height: auto; 
+
+}
+
   .TitleT {
-      font-size: 6vw; /* Increase size for better readability */
+      font-size: 6vw; 
       padding: 2vw; /* Adjust padding */
   }
 
