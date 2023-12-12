@@ -1,0 +1,98 @@
+.containerC{
+        width: 100%;
+        margin: auto;
+        padding-left: 360px;
+}
+
+.contact-section {
+    text-align: center;
+    padding: 20px;
+    margin-top:5%;
+    background-color: #1e1e1e; /* Adjust background color as needed */
+    color: #333;
+}
+
+.contact-section h2 {
+    margin-bottom: 1%;
+}
+
+.pContact{
+    color: #FFFDD0;
+    font-size:1em;
+    margin-bottom: 2%;
+}
+
+.hContact{
+    color: var(--background);
+    margin: 0 auto; /* Center the heading and remove side margins */
+    padding: 0.5vw 1vw; /* Adjust padding */
+    font-family: monospace;
+    background: var(--text);
+    font-weight: lighter;
+    font-size: 2.5vw; /* Adjust font size to be more responsive */
+    text-align: center; /* Center the text */
+    line-height: normal; /* Adjust line height for better readability */
+    word-wrap: break-word; /* Ensure long words do not overflow */
+    display: inline-block; /* Change display to handle background sizing */
+    max-width: 95%; /* Prevent it from taking full width */
+}
+
+.cp{
+    font-family: monospace;
+    font-size: medium;
+    text-align: end;
+    color: #FFFDD0;
+    padding-left: 360px;
+}
+
+.contact-buttons a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #FFFDD0; /* Adjust button color as needed */
+    color: #1e1e1e;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-buttons a:hover {
+    background-color: #FFFDD0; /* Adjust hover color as needed */
+}
+
+@media (max-width: 680px) {
+    /* Adjust container padding for mobile */
+    .containerC {
+        padding-left: 20px; /* Reduced for smaller screens */
+        padding-right: 20px; /* Add right padding */
+    }
+
+    /* Adjust Contact Section Title */
+    .hContact {
+        font-size: 6vw; /* Increase size for better readability */
+        padding: 1vw; /* Adjust padding */
+    }
+
+    /* Adjust paragraph style */
+    .pContact {
+        font-size: 4vw; /* Adjust font size for readability */
+        padding: 0 5px; /* Add horizontal padding */
+    }
+
+    /* Adjust the contact buttons */
+    .contact-buttons a {
+        font-size: 4vw; /* Adjust font size for readability */
+        padding: 10px; /* Adjust padding */
+        margin: 5px 0; /* Adjust margin for spacing */
+        width: auto; /* Auto width for flexibility */
+    }
+
+    /* Adjust the copyright paragraph */
+    .cp {
+        font-size: 4vw; /* Adjust font size for readability */
+        text-align: center; /* Center-align the text */
+        padding-left: 0; /* Remove left padding */
+        padding-right: 0; /* Remove right padding */
+    }
+}
