@@ -8,13 +8,17 @@ body {
 
 nav, header, footer {
     display: block;
+    background: #161715;
 }
+
+#sect-P {
+    background: #161715;
+ }
 
 /* Container */
 .containerP {
     width: 100%;
     margin: auto;
-    padding-top: 4%;
     padding-bottom: 4%;
     padding-left: 360px;
     font-family: monospace;
@@ -140,9 +144,7 @@ h2.project-type-title{
     margin-bottom: 10px;
 }
 /* Background Gradient */
-#sect-P {
-    background: #3a3a3a;
-}
+
 
 
 /* Responsive Design */

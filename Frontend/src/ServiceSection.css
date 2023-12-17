@@ -13,15 +13,15 @@ body {
     min-height: 37.5vw;
 }
 
-.sect-1{
-    background:#3a3a3a;
+#sect-1{
+    background:#161715;
 }
 
 .rowS{
     display: flex;
     justify-content: center;
-    margin-top: 3%;
 }
+
 .Service-section {
     display: flex;
     flex-direction: column;

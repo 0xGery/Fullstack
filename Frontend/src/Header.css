@@ -66,6 +66,7 @@ nav ul.topnav li a {
     position: relative;
     padding: 14px 20px; /* Adjust padding as needed */
     color: #FFFDD0;
+    opacity: 0.5;
     display: block;
     text-decoration: none;
     transition: font-weight 0.3s ease, text-decoration 0.3s ease; 
@@ -77,14 +78,14 @@ nav ul.topnav li a.selected::before {
     content: '> ';
     position: absolute;
     left: 0;
-    color: #FFD700; /* Adjust the color as needed */
-    /* You can add more styling here if needed */
+    color: #FFD700;
 }
 
 nav ul.topnav li a:hover,
 nav ul.topnav li a.selected {
     text-decoration: underline; /* Underline on hover and when selected */
     color: #FFD700; /* Change color on hover and when selected */
+    opacity: 1;
 }
 
 ul.topnav li.dropdownIcon {

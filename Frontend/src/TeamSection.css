@@ -2,12 +2,12 @@
     width: 100%;
     min-height: 350px;
     margin: auto;
-    padding-top: 3%;
     padding-bottom: 4%;
     padding-left: 360px;
     font-family: monospace;
-    background-color: #707070;
 }
+
+
 
 .rowT {
     width: 100%;
@@ -15,8 +15,6 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 3%;
-
 }
 
 .Team-section {

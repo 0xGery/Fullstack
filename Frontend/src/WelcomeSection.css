@@ -1,6 +1,8 @@
+
+
 :root{
-    --text: #FFFDD0;
-    --background: #2f2f2f;
+    --text: #bfb7af;
+    --background: #161715;
     --font-family: monospace;
 }
 
@@ -12,7 +14,6 @@ footer {
 
 
 body {
-    background-color: #1E1E1E;
     line-height: 1;
     margin: 0;
 }
@@ -99,6 +100,7 @@ div.leftSide-col{
     max-width: 100%; /* Adjust to your image's size */
     height: auto; /* Maintain aspect ratio */
     filter: grayscale(100%); /* Start in grayscale */
+    opacity: 0.5;
 }
 
 .logo:hover {
@@ -136,6 +138,8 @@ h1.large2 {
     font-size: 1vw;
     line-height: 1.5vw;
     text-align: justify;
+    opacity: 0.5;
+
 }
 
 h2.small {
@@ -155,9 +159,9 @@ div.box {
     margin: 24px;
     padding: 24px 24px 40px 24px;
     border-radius: 7px;
-    background-color: #fff;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, .15), 0 2px 3px 0 rgba(0, 0, 0, .1);
 }
+
 div.Icon img{
     max-width: 100%;
     height: auto;

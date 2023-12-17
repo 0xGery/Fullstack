@@ -22,7 +22,7 @@ function TeamSection() {
     };
 
     return (
-        <div className="containerTeam">
+        <div className="containerTeam" id='sect-1'>
             <div className="rowT">
             <div className='Team-section'>
             <h2 className="TitleT">Our Team</h2>

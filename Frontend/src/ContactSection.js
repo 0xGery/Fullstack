@@ -3,7 +3,7 @@ import './ContactSection.css'; // Make sure to create this CSS file for styling
 
 function ContactSection() {
     return (
-        <div className='containerC'>
+        <div className='containerC' id='sect-1'>
         <div className="contact-section">
             <h2 className='hContact'>Contact Us</h2>
             <p className='pContact'>if you have any questions, feel free to reach out to us!</p>
