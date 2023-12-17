@@ -7,7 +7,7 @@ function ProjectSection() {
     const [selectedType, setSelectedType] = useState('Past'); 
 
     useEffect(() => {
-        fetch('https://api.0xgery.xyz/api/projects')
+        fetch('https://api.nocturnode.tech/api/projects')
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);

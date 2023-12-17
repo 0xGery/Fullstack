@@ -8,7 +8,7 @@ function ServiceSection() {
     const [selectedServiceType, setSelectedServiceType] = useState('Relay');
 
     useEffect(() => {
-        fetch('https://api.0xgery.xyz/api/chains')
+        fetch('https://api.nocturnode.tech/api/chains')
             .then(response => response.json())
             .then(data => {
                 setChains(data);
@@ -23,7 +23,7 @@ function ServiceSection() {
         let query = `?serviceType=${serviceType}`;
         if (chainName) query += `&chainName=${chainName}`;
     
-        fetch(`https://api.0xgery.xyz/api/Service${query}`)
+        fetch(`https://api.nocturnode.tech/api/Service${query}`)
             .then(response => response.json())
             .then(data => setServices(data))
             .catch(error => console.error('Error fetching services:', error));
