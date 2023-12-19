@@ -1,282 +1,263 @@
 .containerTeam{
-    width: 100%;
-    min-height: 350px;
-    margin: auto;
-    padding-bottom: 4%;
-    padding-left: 360px;
-    font-family: monospace;
+  width: 100%;
+  min-height: 350px;
+  margin: auto;
+  padding-bottom: 4%;
+  padding-left: 360px;
+  font-family: monospace;
 }
 
 .rowT {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .Team-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: monospace;
+display: flex;
+flex-direction: column;
+align-items: center;
+font-family: monospace;
 }
 
 .TeamList{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 20px;
-    flex-wrap: wrap; /* Wrap types for smaller screens */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .TitleT{
-  color: var(--background);
-  margin: 0 auto; /* Center the heading and remove side margins */
-  padding: 0.5vw 1vw; /* Adjust padding */
-  font-family: monospace;
-  background: var(--text);
-  font-weight: lighter;
-  font-size: 2.5vw; /* Adjust font size to be more responsive */
-  text-align: center; /* Center the text */
-  line-height: normal; /* Adjust line height for better readability */
-  word-wrap: break-word; /* Ensure long words do not overflow */
-  display: inline-block; /* Change display to handle background sizing */
-  max-width: 95%; /* Prevent it from taking full width */
-  margin-bottom: 10%;
+color: var(--background);
+margin: 0 auto;
+padding: 0.5vw 1vw;
+font-family: monospace;
+background: var(--text);
+font-weight: lighter;
+font-size: 2.5vw;
+text-align: center;
+line-height: normal;
+word-wrap: break-word;
+display: inline-block;
+max-width: 95%;
+margin-bottom: 10%;
 }
 
-/* Styles for Member Name */
 .profilePict {
-    width: 100%; /* Profile picture takes the full width of the card */
-    height: auto; /* Maintain aspect ratio */
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-/* Name styling */
 .memberName {
-    font-size: 18px; /* Or size that fits your design */
-    text-align: center;
-    color: #333;
-    font-family: monospace;
-    font-weight: 600;
-    margin-top: 10px; /* Space between image and name */
+  font-size: 18px;
+  text-align: center;
+  color: #333;
+  font-family: monospace;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
-/* Role styling */
 .memberRole {
-    font-size: 16px; /* Or size that fits your design */
-    text-align: center;
-    font-weight: 400;
-    font-family: monospace;
-    margin-bottom: 20px; /* Space below the role before the next card starts */
+  font-size: 16px;
+  text-align: center;
+  font-weight: 400;
+  font-family: monospace;
+  margin-bottom: 20px;
 }
 
-/* Styles for Member Description */
 .memberdesc {
-  font-size: 1vw;
-  color: green;
-  line-height: 1.6;
-  overflow-y: auto; /* Enable scrolling for overflow */
-  max-height: 70%; /* Adjust as needed */
-  margin: 10px 0; /* Add some margin */
+font-size: 1vw;
+color: green;
+line-height: 1.6;
+overflow-y: auto;
+max-height: 70%;
+margin: 10px 0;
 }
 
 .card {
-    margin: 10px auto 0;
-    width: 10vw;
-    height: 15vw;
-    perspective: 1000px;
-    margin-top: 1vw;
-    margin-left: 4vw; /* Increase left margin */
-    margin-right: 4vw; /* Increase right margin */
+  margin: 10px auto 0;
+  width: 10vw;
+  height: 15vw;
+  perspective: 1000px;
+  margin-top: 1vw;
+  margin-left: 4vw;
+  margin-right: 4vw;
 }
 
 .card__inner {
-    width: 100%;
-    height: 100%;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-    position: relative;
-  }
-
-  .card__face--front img {
-    max-width: 100%; /* Ensures image is responsive */
-    height: auto; /* Maintains aspect ratio */
-    margin-top: 1vw; /* Add space between the text and image */
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
 }
 
-  
-  .card__inner.is-flipped {
-    transform: rotateY(180deg);
-  }
-  
-  .card__face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    overflow: hidden;
-    border-radius: 2vw;
-    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+.card__face--front img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1vw;
+}
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Distribute space evenly */
-  }
-  
-  .card__face--front {
-    background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
-    display: flex;
-    flex-direction: column; 
-    padding: 14px;
-    align-items: top ;
-    justify-content: center;
-  }
-  
-  .card__face--front h2 {
-    color: yellow;
-    font-size: 1.2vw;
-  }
-  
-  .card__face--back {
-    background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
-    transform: rotateY(180deg);
-    
-    overflow-y: auto; /* Enable scrolling for overflow */
-    padding: 10px; /* Add some padding */
-  }
-
-
-  .card__content {
-    width: 100%;
-    /* height: 100%; */
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Distribute space evenly */
-  }
-  
-  .card__header {
-    position: relative;
-    padding: 30px 30px 40px;
-  }
-  
-  .card__header:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: linear-gradient(to bottom left, var(--primary) 10%, var(--secondary) 115%);
-    z-index: -1;
-    border-radius: 0px 0px 50% 0px;
-  }
-  
-  .p{
-    display: block;
-    width: 128px;
-    height: 128px;
-    margin: 0 auto 30px;
-    border-radius: 50%;
-    background-color: orange;
-    border: 5px solid #FFF;
-    object-fit: cover;
-  }
-  
-  .card__header h2 {
-    color: blue;
-    font-size: 32px;
-    font-weight: 900;
-    text-transform: uppercase;
-    text-align: center;
-  }
-  
-  .card__body {
-    padding: 4px;
-  }
-  
-  .card__body h3 {
-    color: red;
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 15px;
-  }
-  
-  .card__body p {
-    color: white;
-    line-height: 1.4;
-    font-family: monospace;
-  }
-
-  .pp{
-    display: block;
-    width: 128px;
-    height: 128px;
-    margin: 0 auto 30px;
-    border-radius: 50%;
-    background-color: #FFF;
-    border: 5px solid #FFF;
-    object-fit: cover;
-  }
-
-  /* Mobile Responsive Design for max-width 680px */
-@media (max-width: 680px) {
-  
-  .containerTeam {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .rowT {
-      margin-top: 10px; 
-  }
-
-  .card {
-    width: 80vw;
-    height: auto; 
-    margin-left: 10vw; 
-    margin-right: 10vw; 
-
+.card__inner.is-flipped {
+  transform: rotateY(180deg);
 }
 
 .card__face {
-    width: 20vw;
-    height: auto; 
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 2vw;
+  box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+.card__face--front {
+  background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+  display: flex;
+  flex-direction: column; 
+  padding: 14px;
+  align-items: top;
+  justify-content: center;
+}
+
+.card__face--front h2 {
+  color: yellow;
+  font-size: 1.2vw;
+}
+
+.card__face--back {
+  background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+  transform: rotateY(180deg);
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.card__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card__header {
+  position: relative;
+  padding: 30px 30px 40px;
+}
+
+.card__header:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to bottom left, var(--primary) 10%, var(--secondary) 115%);
+  z-index: -1;
+  border-radius: 0px 0px 50% 0px;
+}
+
+.p{
+  display: block;
+  width: 128px;
+  height: 128px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  background-color: orange;
+  border: 5px solid #FFF;
+  object-fit: cover;
+}
+
+.card__header h2 {
+  color: blue;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.card__body {
+  padding: 4px;
+}
+
+.card__body h3 {
+  color: red;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.card__body p {
+  color: white;
+  line-height: 1.4;
+  font-family: monospace;
+}
+
+.pp{
+  display: block;
+  width: 128px;
+  height: 128px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  background-color: #FFF;
+  border: 5px solid #FFF;
+  object-fit: cover;
+}
+
+@media (max-width: 680px) {
+  .containerTeam {
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+
+  .rowT {
+      margin-top: 10px;
+  }
+
+  .card {
+      width: 80vw;
+      height: auto;
+      margin-left: 10vw;
+      margin-right: 10vw;
+  }
+
+  .card__face {
+      width: 20vw;
+      height: auto;
+  }
+
   .TitleT {
-      font-size: 6vw; 
-      padding: 2vw; /* Adjust padding */
+      font-size: 6vw;
+      padding: 2vw;
   }
 
-  /* Adjust profile picture size */
   .profilePict {
-      width: 50vw; /* Adjust width relative to viewport */
-      height: auto; /* Maintain aspect ratio */
-      border-radius: 50%; /* Make the image round */
+      width: 50vw;
+      height: auto;
+      border-radius: 50%;
   }
 
-  /* Adjust name and role font size */
   .memberName, .memberRole {
-      font-size: 5vw; /* Adjust font size for readability */
+      font-size: 5vw;
   }
 
-  /* Adjust member description */
   .memberdesc {
-      font-size: 4vw; /* Adjust font size */
+      font-size: 4vw;
   }
 
-  /* Adjust card inner styles */
   .card__inner {
-      transform-style: flat; /* Adjust for better performance */
+      transform-style: flat;
   }
-
-  /* Additional styling adjustments as needed */
 }
