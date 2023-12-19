@@ -1,21 +1,18 @@
-/* Basic Reset */
 nav, header, footer {
     display: block;
-    background: #1e1e1e;
+    background: #2f2f2f;
     font-family: monospace;
     font-size: medium;
     line-height: 1vw;
 }
 
-/* Body Styles */
 body {
     background-color: #FFF;
     line-height: 1;
     margin: 0;
-    padding-top: 0; /* Height of the navbar */
+    padding-top: 0;
 }
 
-/* Grid System */
 .containerH {
     width: 100%;
     margin: auto;
@@ -39,15 +36,15 @@ body {
 nav {
     position: fixed;
     top: 0;
-    left: 0; /* Position nav on the right side */
-    height: 100%; /* Full height */
-    width: 360px; /* Width of the sidebar */
+    left: 0;
+    height: 100%;
+    width: 360px;
     background-color: #1e1e1e;
-    z-index: 100; /* Ensures navbar is on top */
+    z-index: 100;
     display: flex;
-    flex-direction: column; /* Align items vertically */
+    flex-direction: column;
     justify-content: flex-start;
-    padding: 0; /* Spacing at the top */
+    padding: 0;
 }
 
 nav ul.topnav {
@@ -57,20 +54,19 @@ nav ul.topnav {
 }
 
 nav ul.topnav li {
-    display: block; /* Display items in a block (vertical) */
-    width: 100%; /* Full width */
+    display: block;
+    width: 100%;
 }
 
 nav ul.topnav li a {
     text-align: left;
     position: relative;
-    padding: 14px 20px; /* Adjust padding as needed */
+    padding: 14px 20px;
     color: #FFFDD0;
     opacity: 0.5;
     display: block;
     text-decoration: none;
-    transition: font-weight 0.3s ease, text-decoration 0.3s ease; 
-
+    transition: font-weight 0.3s ease, text-decoration 0.3s ease;
 }
 
 nav ul.topnav li a:hover::before,
@@ -83,52 +79,51 @@ nav ul.topnav li a.selected::before {
 
 nav ul.topnav li a:hover,
 nav ul.topnav li a.selected {
-    text-decoration: underline; /* Underline on hover and when selected */
-    color: #FFD700; /* Change color on hover and when selected */
+    text-decoration: underline;
+    color: #FFD700;
     opacity: 1;
 }
 
 ul.topnav li.dropdownIcon {
-    display: none; /* Hide dropdown icon if not needed */
+    display: none;
 }
 
-/* Mobile Responsive */
 @media screen and (max-width: 680px) {
     nav {
         position: fixed;
         top: 0;
         right: 0;
-        width: 100%; /* Full width for smaller screens */
+        width: 100%;
         height: auto;
-        background-color: #1e1e1e; /* Background color */
+        background-color: #1e1e1e;
     }
 
     nav ul.topnav {
         flex-direction: column;
         align-items: flex-start;
         padding: 0;
-        margin-top: 20px; /* Provide space for the dropdown icon */
+        margin-top: 20px;
     }
 
     nav ul.topnav li a {
         text-align: left;
-        padding: 1.5vw 0 5vw 5vw; /* Adjust padding as needed */
+        padding: 1.5vw 0 5vw 5vw;
         color: #FFFDD0;
         display: block;
     }
 
     nav ul.topnav > li:not(:first-child):not(.dropdownIcon),
     nav ul.topnav.responsive > li:not(:first-child) {
-        display: none; /* Initially hide menu items */
+        display: none;
     }
 
     nav ul.topnav > li.dropdownIcon {
         display: block;
-        position: fixed; /* Fixed position to keep it stationary */
+        position: fixed;
         left: 92vw;
         top: 0;
         margin: 3.5vw;
-        z-index: 101; /* Ensure it's above other elements */
+        z-index: 101;
     }
 
     nav ul.topnav.responsive {
@@ -136,7 +131,7 @@ ul.topnav li.dropdownIcon {
     }
 
     nav ul.topnav.responsive > li.dropdownIcon {
-        right: 2vw; /* Adjust position as needed */
+        right: 2vw;
     }
 
     nav ul.topnav.responsive li a {
@@ -145,7 +140,7 @@ ul.topnav li.dropdownIcon {
     }
 
     nav ul.topnav.responsive > li:not(:first-child) {
-        display: block; /* Show the list items */
-        width: 100%; /* Full width */
+        display: block;
+        width: 100%;
     }
 }

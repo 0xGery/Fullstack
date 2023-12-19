@@ -16,7 +16,6 @@ function ProjectSection() {
             })
             .then(data => {
                 setProjects(data);
-                // Calculate counts for each category
                 const counts = { total: data.length, Past: 0, Mainnet: 0, Testnet: 0, Upcoming: 0 };
                 data.forEach(project => {
                     if (project.type in counts) {

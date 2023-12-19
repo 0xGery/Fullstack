@@ -1,17 +1,12 @@
-
-
 :root{
-    --text: #bfb7af;
-    --background: #161715;
+    --text: #fffdd0;
+    --background: #2f2f2f;
     --font-family: monospace;
 }
 
-nav, 
-header, 
-footer {
+nav, header, footer {
     display: block;
 }
-
 
 body {
     line-height: 1;
@@ -39,7 +34,6 @@ label {
     padding-left: 360px;
 }
 
-
 .rowW{
     width: 100%;
     margin-top:0px;
@@ -53,21 +47,18 @@ label {
     content: "";
 }
 
-
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
 .col-4 {width: 33.33%;}
 .col-5 {width: 41.66%;}
-.col-6 {width: 50%;
-margin-bottom: 100%;
-align-self: center;}
+.col-6 {width: 50%; margin-bottom: 100%; align-self: center;}
 .col-7 {width: 58.33%;}
 .col-8 {width: 66.66%;}
 .col-9 {width: 75%;}
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
-.col-12 {width: 100%;}/* Additional styling as needed */
+.col-12 {width: 100%;}
 
 * {
     box-sizing: border-box;
@@ -86,29 +77,25 @@ div.leftSide-col{
 
 .rightSide-col {
     display: flex;
-    align-items: center; /* Align vertically */
-    height: 100%; /* Take full height of parent */
+    align-items: center;
+    height: 100%; 
     margin-left: 10%;
     margin-top: 10vw;
     margin-right: 10%;
 }
 
-
 .logo {
     transition: transform 0.3s ease, filter 0.3s ease;
-    display: inline-block; /* or block depending on your layout */
-    max-width: 100%; /* Adjust to your image's size */
-    height: auto; /* Maintain aspect ratio */
-    filter: grayscale(100%); /* Start in grayscale */
-    opacity: 0.5;
+    display: inline-block; 
+    max-width: 100%;
+    height: auto; 
+    filter: grayscale(100%);
 }
 
 .logo:hover {
-    transform: scale(1.05); /* Gently increase the size */
-    filter: grayscale(0%); /* Return to full color */
+    transform: scale(1.05); 
+    filter: grayscale(0%);
 }
-
-
 
 h1.Project{
     font-size: 65px;
@@ -117,17 +104,17 @@ h1.Project{
 
 h1.large {
     color: var(--background);
-    margin: 0 auto; /* Center the heading and remove side margins */
-    padding: 0.5vw 1vw; /* Adjust padding */
+    margin: 0 auto; 
+    padding: 0.5vw 1vw; 
     font-family: monospace;
     background: var(--text);
     font-weight: lighter;
-    font-size: 2.5vw; /* Adjust font size to be more responsive */
-    text-align: center; /* Center the text */
-    line-height: normal; /* Adjust line height for better readability */
-    word-wrap: break-word; /* Ensure long words do not overflow */
-    display: inline-block; /* Change display to handle background sizing */
-    max-width: 95%; /* Prevent it from taking full width */
+    font-size: 2.5vw; 
+    text-align: center; 
+    line-height: normal; 
+    word-wrap: break-word; 
+    display: inline-block; 
+    max-width: 95%; 
 }
 
 h1.large2 {
@@ -138,8 +125,6 @@ h1.large2 {
     font-size: 1vw;
     line-height: 1.5vw;
     text-align: justify;
-    opacity: 0.5;
-
 }
 
 h2.small {
@@ -150,9 +135,8 @@ h2.small {
 }
 
 h1.Project {
-    font-size: 4vw; /* Adjust the value as needed */
+    font-size: 4vw; 
 }
-
 
 div.box {
     text-align: center;
@@ -167,54 +151,53 @@ div.Icon img{
     height: auto;
 }
 
-
 @media only screen and (max-width: 680px) {
     .containerW {
-        padding-left: 20px; /* Adjusted for smaller screens */
-        padding-right: 20px; /* Added to prevent content from touching the edges */
-        height: auto; /* Height adjusted for content */
+        padding-left: 20px;
+        padding-right: 20px;
+        height: auto;
     }
 
     .rowW {
-        flex-direction: column; /* Stack columns vertically on small screens */
+        flex-direction: column;
     }
 
     .col-6 {
-        width: 100%; /* Full width for small screens */
-        margin-bottom: 50px; /* Adjusted margin */
+        width: 100%;
+        margin-bottom: 50px;
     }
 
     h1.large, h1.Project {
-        font-size: 5vw; /* Smaller font size for better readability */
-        text-align: left; /* Align text to the left */
+        font-size: 5vw;
+        text-align: left;
     }
 
     h1.large2 {
-        font-size: 3.5vw; /* Reduced font size for readability */
-        line-height: 5vw; /* Adjusted line height */
-        text-align: left; /* Align text to the left */
+        font-size: 3.5vw;
+        line-height: 5vw;
+        text-align: left;
     }
 
     h2.small {
-        margin-left: 0; /* Align left */
-        font-size: 4vw; /* Reduce font size */
+        margin-left: 0; 
+        font-size: 4vw; 
     }
 
     div.box {
-        margin: 12px; /* Adjusted margin */
-        padding: 12px 12px 20px 12px; /* Adjusted padding */
+        margin: 12px; 
+        padding: 12px 12px 20px 12px; 
     }
 
     div.leftSide-col, div.rightSide-col {
-        margin-left: 0; /* Remove left margin */
-        margin-top: 20%; /* Adjust top margin */
+        margin-left: 0; 
+        margin-top: 20%;
     }
 
     .logo {
-        display: none; /* Full width images */
+        display: none;
     }
 
     label, p, article p {
-        font-size: 5vw; /* Adjust font size for readability */
+        font-size: 5vw; 
     }
 }

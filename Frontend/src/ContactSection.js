@@ -1,5 +1,5 @@
 import React from 'react';
-import './ContactSection.css'; // Make sure to create this CSS file for styling
+import './ContactSection.css'; 
 
 function ContactSection() {
     return (
@@ -17,7 +17,7 @@ function ContactSection() {
             </div>
            
         </div>
-        <p className='cp'>© 2023 0xGery. All Right reserved.</p>
+        <p className='cp'>© 2023 0xGery. All Right Reserved.</p>
         </div>
     );
 }

@@ -43,23 +43,23 @@ html {
 
 
 .mobile-message {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed position */
+  display: none; 
+  position: fixed; 
   top: 0;
   left: 3px;
   right: 3px;
   bottom: 0;
-  background-color: #161715; /* Background color */
-  color: #bfb7af; /* Text color */
-  font-family: monospace; /* Monospace font */
+  background-color: #161715; 
+  color: #bfb7af; 
+  font-family: monospace;
   font-style: italic;
   font-variant-caps: all-small-caps;
   display: flex;
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  font-size: 20px; /* Adjust font size as needed */
-  z-index: 1000; /* Make sure it's above all other content */
+  font-size: 20px; 
+  z-index: 1000; 
 }
 
 @media (max-width: 680px) {

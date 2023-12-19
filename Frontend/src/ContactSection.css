@@ -17,7 +17,6 @@
 .pContact{
     color: #FFFDD0;
     font-size:1em;
-    margin-bottom: 2%;
 }
 
 .hContact{
@@ -27,7 +26,7 @@
     font-family: monospace;
     background: var(--text);
     font-weight: lighter;
-    font-size: 2.5vw; /* Adjust font size to be more responsive */
+    font-size: 1.5vw; /* Adjust font size to be more responsive */
     text-align: center; /* Center the text */
     line-height: normal; /* Adjust line height for better readability */
     word-wrap: break-word; /* Ensure long words do not overflow */

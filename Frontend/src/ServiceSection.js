@@ -17,7 +17,7 @@ function ServiceSection() {
             .catch(error => console.error('Error fetching chains:', error));
 
         fetchServices('Relay', selectedChain);
-    }, [selectedChain]); // Dependency on selectedChain to refetch when it changes
+    }, [selectedChain]); 
 
     const fetchServices = (serviceType, chainName) => {
         let query = `?serviceType=${serviceType}`;
@@ -41,19 +41,18 @@ function ServiceSection() {
     
     const copyToClipboard = (text) => {
         navigator.clipboard.writeText(text)
-            .then(() => alert(`Copied: ${text}`)) // You can replace this with a more subtle notification
+            .then(() => alert(`Copied: ${text}`)) 
             .catch(err => console.error('Error copying text: ', err));
     };
     
     const renderServices = () => {
         if (services.length === 0) {
-            return <p>No services available under the {selectedServiceType} category.</p>;
+            return <p className='NoService'>No services available under the {selectedServiceType} Service</p>;
         }
     
         return services.map(service => (
             <div key={service._id} className="service-item">
                 <h3>{service.chainName}</h3>
-                {/* Additional service details */}
             </div>
         ));
     };
@@ -87,7 +86,7 @@ function ServiceSection() {
                     </select>
                      {renderChainDropdown()}
                 </div>
-                    <div className="project-container">
+                    <div className="Service-container">
                         {renderServices()}
                     </div>
                 </div>
