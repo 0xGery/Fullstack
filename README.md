@@ -1,2 +1,0 @@
-# Fullstack
-Developing Fullstack Website
