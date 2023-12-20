@@ -1,6 +1,7 @@
 :root{
     --text: #fffdd0;
     --background: #2f2f2f;
+    --hover-color: #fff87a;
     --font-family: monospace;
 }
 
@@ -117,7 +118,7 @@ h1.large {
     max-width: 95%; 
 }
 
-h1.large2 {
+.large2 {
     color: var(--text);
     font-family: monospace;
     font-weight: lighter;
@@ -125,7 +126,15 @@ h1.large2 {
     font-size: 1vw;
     line-height: 1.5vw;
     text-align: justify;
+    transition: transform 0.3s ease, color 0.3s ease; 
 }
+
+.large2:hover {
+    transform: scale(1.03); 
+    color: var(--hover-color); 
+}
+
+
 
 h2.small {
     color:#502570;
