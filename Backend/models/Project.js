@@ -11,6 +11,7 @@ const projectSchema = new mongoose.Schema({
 const serviceSchema = new mongoose.Schema({
     chainName: String, // Chainlisted
     serviceType: String, // 'Relayer' or 'ChainService'
+    decription: String,
     chainTo: String,
     imageUrl: String,
     Installation: String,
