@@ -6,6 +6,28 @@ nav, header, footer {
     line-height: 1vw;
 }
 
+nav {
+
+    justify-content: space-between; 
+}
+
+.social {
+    display: flex;
+    justify-content: space-around; /* Space out the icons */
+    align-items: center;
+    padding-bottom: 20px; /* Add padding at the bottom */
+}
+
+.social a {
+    display: inline-block;
+    margin: 0 10px; /* Space between icons */
+}
+
+.social img {
+    height: 24px; /* Adjust size as needed */
+    width: auto;
+}
+
 body {
     background-color: #FFF;
     line-height: 1;
@@ -19,6 +41,7 @@ body {
     padding-top: 4%;
     padding-bottom: 4%;
 }
+
 
 .rowH {
     width: 100%;

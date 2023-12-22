@@ -34,6 +34,17 @@ function Header() {
                         <button onClick={DropdownMenu}>&#9776;</button>
                     </li>
                 </ul>
+                <div className='social'>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                        <img src="/path/to/twitter-icon.svg" alt="" />
+                    </a>
+                    <a href="https://telegram.org" target="_blank" rel="noopener noreferrer">
+                        <img src="/path/to/telegram-icon.svg" alt="" />
+                    </a>
+                    <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
+                        <img src="/path/to/discord-icon.svg" alt="" />
+                    </a>
+                </div>
             </nav>
         </header>
     );

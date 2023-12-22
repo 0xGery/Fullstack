@@ -52,10 +52,39 @@ function ServiceSection() {
     
         return services.map(service => (
             <div key={service._id} className="service-item">
-                <h3>{service.chainName}</h3>
+                <h3 className='ChainName'>{service.chainName}</h3>
+                {selectedServiceType === "Tutorials" && (
+                    <>
+                        <p className='ServiceDesc'>{service.description}</p>
+                        <p className='sTitle'>- One-line Installation:</p>
+                        <p className='clickableUrl' onClick={() => copyToClipboard(service.Installation)}>{service.Installation}</p>
+                        <p className='sTitle'>
+                        - Check Details  
+                        <a href={service.Github} target="_blank" rel="noopener noreferrer" className="github">
+                            here
+                        </a>.
+                    </p>
+                    </>
+                )}
+                {selectedServiceType === "Relay" && (
+                    <>
+                        <p>{service.relayData}</p>
+                    </>
+                )}
+                {selectedServiceType === "EndPoint" && (
+                    <>
+                        <p>{service.endpointData}</p>
+                    </>
+                )}
+                {selectedServiceType === "Delegator" && (
+                    <>
+                        <p>{service.delegatorData}</p>
+                    </>
+                )}
             </div>
         ));
     };
+    
 
     const renderChainDropdown = () => {
         return chains.length > 0 ? (
