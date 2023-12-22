@@ -35,14 +35,14 @@ function Header() {
                     </li>
                 </ul>
                 <div className='social'>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                        <img src="/path/to/twitter-icon.svg" alt="" />
+                    <a href="https://twitter.com/NocturnDao" target="_blank" rel="noopener noreferrer">
+                        <img src="https://raw.githubusercontent.com/0xGery/Fullstack/main/Frontend/src/Assets/social/twitter.svg" alt="" />
                     </a>
-                    <a href="https://telegram.org" target="_blank" rel="noopener noreferrer">
-                        <img src="/path/to/telegram-icon.svg" alt="" />
+                    <a href="https://t.me/NocturnDao" target="_blank" rel="noopener noreferrer">
+                        <img src="https://raw.githubusercontent.com/0xGery/Fullstack/main/Frontend/src/Assets/social/telegram.svg" alt="" />
                     </a>
-                    <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
-                        <img src="/path/to/discord-icon.svg" alt="" />
+                    <a href="https://discord.gg/XWd58f9MxN" target="_blank" rel="noopener noreferrer">
+                        <img src="https://raw.githubusercontent.com/0xGery/Fullstack/main/Frontend/src/Assets/social/discord.svg" alt="" />
                     </a>
                 </div>
             </nav>
