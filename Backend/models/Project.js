@@ -21,7 +21,8 @@ const serviceSchema = new mongoose.Schema({
 const teamSchema = new mongoose.Schema({
     Name: String,
     Role: String,
-    description: String,
+    TwitterUrl: String,
+    TelegramUrl: String,
     imageUrl: String,
 })
 

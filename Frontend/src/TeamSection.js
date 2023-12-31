@@ -37,8 +37,14 @@ function TeamSection() {
                                 </div>
                                 <div className="card__face card__face--back">
                                     <div className="card__content">
-                                        <div className="card__body">
-                                            <p className='memberdesc'>{member.description}</p>
+                                        <p className='descT'>Social</p>
+                                        <div className="SocialApp">
+                                            <a href={member.TelegramUrl} target="_blank" rel="noopener noreferrer">
+                                                <img src="https://raw.githubusercontent.com/0xGery/Fullstack/main/Frontend/src/Assets/social/telegram.svg" alt="Telegram" />
+                                            </a>
+                                            <a href={member.TwitterUrl} target="_blank" rel="noopener noreferrer">
+                                                <img src="https://raw.githubusercontent.com/0xGery/Fullstack/main/Frontend/src/Assets/social/twitter.svg" alt="Twitter" />
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
