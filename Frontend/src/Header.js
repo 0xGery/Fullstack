@@ -23,7 +23,7 @@ function Header() {
                 <ul className="topnav" id="Dropdown">
                     <li><a href="#Welcome" onClick={() => handleNavLinkClick('Welcome')} className={activeLink === 'Welcome' ? 'selected' : ''}>Nocturn</a></li>
                     <li className="nav-center-group">
-                        <a href="#Project" onClick={() => handleNavLinkClick('Project')} className={activeLink === 'Project' ? 'selected' : ''}>Project</a>
+                        <a href="#Project" onClick={() => handleNavLinkClick('Project')} className={activeLink === 'Project' ? 'selected' : ''}>Networks</a>
                         <a href="#Service" onClick={() => handleNavLinkClick('Service')} className={activeLink === 'Service' ? 'selected' : ''}>Service</a>
                         <a href="#Team" onClick={() => handleNavLinkClick('Team')} className={activeLink === 'Team' ? 'selected' : ''}>Team</a>
                         <a href="#Contact" onClick={() => handleNavLinkClick('Contact')} className={activeLink === 'Contact' ? 'selected' : ''}>Contact</a>
