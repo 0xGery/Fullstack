@@ -110,7 +110,7 @@ function ServiceSection() {
                     <select className="ServiceL" onChange={handleServiceTypeChange} value={selectedServiceType}>
                         <option value="Relay">Relayer</option>
                         <option value="Tutorials">Tutorials</option>
-                        <option value="EndPoint">End Point</option>
+                        <option value="EndPoint">EndPoint</option>
                         <option value="Delegator">Delegate</option>
                     </select>
                      {renderChainDropdown()}
