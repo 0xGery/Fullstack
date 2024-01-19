@@ -11,7 +11,7 @@ import ProjectSection from './ProjectSection';
 import ServiceSection from './ServiceSection';
 import TeamSection from './TeamSection';
 import ContactSection from './ContactSection';
-import CalculationForm from './CalculationForm';
+import Experimental from './Experimental';
 
 function App() {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 680);
@@ -44,10 +44,9 @@ function App() {
                                     <div id="Contact"><ContactSection /></div>
                                 </div>
                             }/>
-                            <Route path="/calculation" element={
+                            <Route path="/Experimental" element={
                                 <div className="App">
-                                    <h1>Debt Ratio Calculation</h1>
-                                    <CalculationForm />
+                                    <Experimental />
                                 </div>
                             }/>
                         </Routes>

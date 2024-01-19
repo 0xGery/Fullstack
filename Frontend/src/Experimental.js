@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-function CalculationForm() {
+function Experimental() {
   const [formData, setFormData] = useState({
     totalDeposit: '',
     currentPrice: '',
@@ -58,4 +58,4 @@ function CalculationForm() {
   );
 }
 
-export default CalculationForm;
+export default Experimental;
