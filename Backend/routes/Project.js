@@ -14,21 +14,6 @@ router.get('/projects', async (req, res) => {
     }
 });
 
-// Service
-/*
-router.get('/services', async (req, res) => {
-    console.log('Services route hit');
-    try {
-        const services = await Service.find();
-        console.log('Services from DB:', services); // Log data fetched from DB
-        res.json(services);
-    } catch (err) {
-        console.error('DB Error:', err.message); // Log any DB errors
-        res.status(500).json({ message: err.message });
-    }
-});
-*/
-
 
 // Service
 router.get('/Service', async (req, res) => {
@@ -68,39 +53,6 @@ router.get('/teams', async (req, res) => {
         res.status(500).json({ message: err.message });
     }
 });
-
-
-/*
-router.post('/send', async (req, res) => {
-    let { fullName, email, message } = req.body;
-
-    // Nodemailer setup
-    let transporter = nodemailer.createTransport({
-        service: 'gmail', // or your email service
-        auth: {
-            user: 'yourEmail@example.com', 
-            pass: 'yourEmailPassword' 
-        }
-    });
-
-    let mailOptions = {
-        from: email,
-        to: 'yourEmail@example.com', // your email to receive messages
-        subject: `New Message from ${fullName}`,
-        text: message
-    };
-
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            console.log(error);
-            res.status(500).send('Error');
-        } else {
-            console.log('Email sent: ' + info.response);
-            res.status(200).send('Success');
-        }
-    });
-});
-*/
 
 
 module.exports = router;
