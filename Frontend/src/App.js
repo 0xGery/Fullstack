@@ -11,7 +11,7 @@ import ProjectSection from './ProjectSection';
 import ServiceSection from './ServiceSection';
 import TeamSection from './TeamSection';
 import ContactSection from './ContactSection';
-import Experimental from './Experimental';
+import Privacy from './Privacy';
 
 function App() {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 680);
@@ -44,9 +44,9 @@ function App() {
                                     <div id="Contact"><ContactSection /></div>
                                 </div>
                             }/>
-                            <Route path="/Experimental" element={
+                            <Route path="/Privacy" element={
                                 <div className="App">
-                                    <Experimental />
+                                    <Privacy />
                                 </div>
                             }/>
                         </Routes>

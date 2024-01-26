@@ -65,7 +65,7 @@ body {
     overflow-x: auto; 
     white-space: nowrap; 
     cursor: pointer; 
-    margin: 5px 10px 45px 10px;
+    margin: 5px 10px 2px 10px;
     padding: 10px;
     background-color: #1E1E1E;
     opacity: 0.5;
@@ -79,6 +79,7 @@ body {
     font-size: 1vw;
     color: #fffdd0;
     font-family: monospace;
+;
 }
 
 .github{
@@ -141,7 +142,7 @@ body {
 
 .service-item {
     background-color: #333;
-    max-width: 50vw;
+    width: 50vw;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;

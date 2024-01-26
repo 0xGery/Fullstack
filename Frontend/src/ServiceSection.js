@@ -7,17 +7,25 @@ function ServiceSection() {
     const [selectedChain, setSelectedChain] = useState('');
     const [selectedServiceType, setSelectedServiceType] = useState('Relay');
 
+    // Fetch chains on component mount
     useEffect(() => {
         fetch('https://api.nocturnode.tech/api/chains')
             .then(response => response.json())
             .then(data => {
                 setChains(data);
-                setSelectedChain(data.length > 0 ? data[0] : '');
+                if (data.length > 0) {
+                    setSelectedChain(data[0]);
+                }
             })
             .catch(error => console.error('Error fetching chains:', error));
+    }, []);
 
-        fetchServices('Relay', selectedChain);
-    }, [selectedChain]); 
+    // Fetch services when selectedChain or selectedServiceType changes
+    useEffect(() => {
+        if (selectedChain) {
+            fetchServices(selectedServiceType, selectedChain);
+        }
+    }, [selectedChain, selectedServiceType]); 
 
     const fetchServices = (serviceType, chainName) => {
         let query = `?serviceType=${serviceType}`;
@@ -31,12 +39,10 @@ function ServiceSection() {
     
     const handleServiceTypeChange = (e) => {
         setSelectedServiceType(e.target.value);
-        fetchServices(e.target.value, selectedChain);
     };
     
     const handleChainChange = (e) => {
         setSelectedChain(e.target.value);
-        fetchServices(selectedServiceType, e.target.value);
     };
     
     const copyToClipboard = (text) => {
@@ -73,9 +79,16 @@ function ServiceSection() {
                 )}
                 {selectedServiceType === "EndPoint" && (
                     <>
-                        <p>{service.endpointData}</p>
+                        <p className='ServiceDesc'>{service.description}</p>
+                        <p className='sTitle'>- End Point list:</p>
+                        {service.EndPoint.map((endpoint, index) => (
+                            <p key={index} className='clickableUrl' onClick={() => copyToClipboard(endpoint)}>
+                                {endpoint}
+                            </p>
+                        ))}
                     </>
                 )}
+
                 {selectedServiceType === "Delegator" && (
                     <>
                         <p>{service.delegatorData}</p>
@@ -84,7 +97,6 @@ function ServiceSection() {
             </div>
         ));
     };
-    
 
     const renderChainDropdown = () => {
         return chains.length > 0 ? (
@@ -106,15 +118,15 @@ function ServiceSection() {
                 <div className='Service-section'>
                     <h2 className="TitleS">OUR SERVICES</h2>
 
-                <div className="dropdowns-container">
-                    <select className="ServiceL" onChange={handleServiceTypeChange} value={selectedServiceType}>
-                        <option value="Relay">Relayer</option>
-                        <option value="Tutorials">Tutorials</option>
-                        <option value="EndPoint">EndPoint</option>
-                        <option value="Delegator">Delegate</option>
-                    </select>
-                     {renderChainDropdown()}
-                </div>
+                    <div className="dropdowns-container">
+                        <select className="ServiceL" onChange={handleServiceTypeChange} value={selectedServiceType}>
+                            <option value="Relay">Relayer</option>
+                            <option value="Tutorials">Tutorial</option>
+                            <option value="EndPoint">Endpoint</option>
+                            <option value="Delegator">Delegate</option>
+                        </select>
+                        {renderChainDropdown()}
+                    </div>
                     <div className="Service-container">
                         {renderServices()}
                     </div>
