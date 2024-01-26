@@ -31,6 +31,6 @@ This Privacy Policy is subject to periodic review and potential updates to stay 
 ## Queries and Contact Information
 For inquiries, concerns, or clarifications regarding our Privacy Policy or practices, please contact us. Open communication is vital in our community, and we are here to address any questions you may have.
 
-## This Privacy Policy is a testament to Nocturnode's unwavering dedication to privacy, our commitment as a DAO to open-source values, and our resolve to ensure our users' data security and privacy. We acknowledge that privacy laws and regulations vary by country, and we are committed to compliance with all applicable laws and standards.
+This Privacy Policy is a testament to Nocturnode's unwavering dedication to privacy, our commitment as a DAO to open-source values, and our resolve to ensure our users' data security and privacy. We acknowledge that privacy laws and regulations vary by country, and we are committed to compliance with all applicable laws and standards.
 
 _Nocturnode.tech - Privacy, Transparency, and Community at the Forefront._
