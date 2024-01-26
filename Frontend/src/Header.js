@@ -28,6 +28,8 @@ function Header() {
                         <a href="#Team" onClick={() => handleNavLinkClick('Team')} className={activeLink === 'Team' ? 'selected' : ''}>Team</a>
                         <a href="#Contact" onClick={() => handleNavLinkClick('Contact')} className={activeLink === 'Contact' ? 'selected' : ''}>Contact</a>
                         <a href="https://docs.nocturnode.tech" target="_blank" onClick={() => handleNavLinkClick('Documentation')} className={activeLink === 'Documentation' ? 'selected' : ''}>Documentation</a>
+                        <a href="/Privacy" onClick={() => handleNavLinkClick('Privacy')} className={activeLink === 'Privacy' ? 'selected' : ''}>Privacy Policy</a>
+
                     </li>
                     <li className="topnav-right"><a href="#connect-section" onClick={() => handleNavLinkClick('ConnectWallet')} className={activeLink === 'ConnectWallet' ? 'selected' : ''}>Connect Wallet (soon)</a></li>
                     <li className="dropdownIcon">

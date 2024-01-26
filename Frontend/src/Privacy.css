@@ -1,6 +1,6 @@
 .privacy-policy {
-    margin: 20px;
-    padding: 10px 130px 10px 32px;
+    margin: 20px 20px 0 20px;
+    padding: 56px 220px 0 128px;
     font-family: monospace;
     text-align: left;
   }
@@ -18,9 +18,10 @@
     color: var(--background);
     background: var(--text);
     max-width: 95%;
+    padding: 0.5vw 1vw;
   }
   
-  .privacy-policy p {
+.privacy-policy p {
     color: var(--text);
     font-family: monospace;
     font-weight: lighter;
@@ -31,24 +32,33 @@
     margin-bottom: 1%;
   }
 
-  .privacy-policy p.aha {
+.privacy-policy p.aha {
     color: var(--text);
     font-family: monospace;
     font-weight: lighter;
     font-size: 1vw;
     line-height: 1.5vw;
     text-align: justify;
-    margin-bottom: 4%;
-  }
-  
-  .privacy-policy p:not(.aha):hover {
-    transform: scale(1.03);
-    color: var(--hover-color);
+    margin-bottom: 2%;
   }
 
-  .privacy-policy h1{
+.privacy-policy p.bottom{
+
+  }
+
+.privacy-policy p.almost-bottom{
+    margin: 27px 0px 58px 0;
+
+  }
+  
+.privacy-policy p:not(.aha):not(.bottom):not(.almost-bottom):hover {
+    transform: scale(1.03);
+    color: var(--hover-color);
+}
+
+.privacy-policy h1{
     color: var(--background);
-    margin: 0 0 30px 0;
+    margin: 0 0 15px 0;
     padding: 0.5vw 1vw;
     font-family: monospace;
     background: var(--text);
@@ -60,3 +70,21 @@
     display: inline-block;
     max-width: 95%;
   }
+
+.back-to-dashboard {
+    position: fixed; 
+    bottom: 20px;  
+    right: 20px;     
+    z-index: 1000;  
+    padding: 10px 15px;
+    background-color: #fffdd0; 
+    color: #1e1e1e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.back-to-dashboard:hover {
+    background-color: #fff87a; 
+}
