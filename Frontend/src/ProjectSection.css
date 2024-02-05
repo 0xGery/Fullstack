@@ -138,6 +138,30 @@ h2.project-type-title{
     margin-bottom: 10px;
 }
 
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+}
+
+.page-number {
+    cursor: pointer;
+    padding: 5px;
+    background-color: #292929;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.page-number:hover,
+.page-number.selected {
+    color: #FFD700;
+}
+
 @media (max-width: 680px) {
     .containerP {
         padding-left: 20px;
@@ -173,26 +197,3 @@ h2.project-type-title{
     }
 }
 
-.pagination-controls {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    padding: 20px;
-    position: absolute; 
-    bottom: 0; 
-    left: 0; 
-    width: 100%; 
-}
-
-.page-number {
-    cursor: pointer;
-    padding: 5px;
-    background-color: #292929;
-    color: #ffffff;
-    border-radius: 5px;
-}
-
-.page-number:hover,
-.page-number.selected {
-    color: #FFD700;
-}
