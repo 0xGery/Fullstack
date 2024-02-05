@@ -77,7 +77,6 @@ function ProjectSection() {
         return totalProjects > itemsPerPage ? (
             <div className='pagination-controls'>
                 {pageNumbers.map(number => (
-                    // Add conditional class 'selected' based on currentPage
                     <span key={number} 
                           className={`page-number ${currentPage === number ? 'selected' : ''}`} 
                           onClick={() => setCurrentPage(number)}>
