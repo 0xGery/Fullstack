@@ -4,7 +4,9 @@ import './ProjectSection.css';
 function ProjectSection() {
     const [projects, setProjects] = useState([]);
     const [projectCounts, setProjectCounts] = useState({ total: 0, Past: 0, Mainnet: 0, Testnet: 0, Upcoming: 0 });
-    const [selectedType, setSelectedType] = useState('Past'); 
+    const [selectedType, setSelectedType] = useState('Past');
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 12;
 
     useEffect(() => {
         fetch('https://api.nocturnode.tech/api/projects')
@@ -35,10 +37,14 @@ function ProjectSection() {
 
     const handleTypeClick = (type) => {
         setSelectedType(type);
+        setCurrentPage(1); 
     };
 
     const renderProjects = (type) => {
-        const filteredProjects = categorizeProjects(type);
+        const indexLastItem = currentPage * itemsPerPage;
+        const indexFirstItem = indexLastItem - itemsPerPage;
+        const filteredProjects = categorizeProjects(type).slice(indexFirstItem, indexLastItem);
+
         if (filteredProjects.length === 0) {
             return <p className='NoProject'>No projects available under the {type} category.</p>;
         }
@@ -60,6 +66,28 @@ function ProjectSection() {
         return count === 0 ? "n/a" : count;
     };
 
+    const renderPaginationControls = () => {
+        const pageNumbers = [];
+        const totalProjects = projects.filter(project => project.type === selectedType).length;
+    
+        for (let i = 1; i <= Math.ceil(totalProjects / itemsPerPage); i++) {
+            pageNumbers.push(i);
+        }
+    
+        return totalProjects > itemsPerPage ? (
+            <div className='pagination-controls'>
+                {pageNumbers.map(number => (
+                    // Add conditional class 'selected' based on currentPage
+                    <span key={number} 
+                          className={`page-number ${currentPage === number ? 'selected' : ''}`} 
+                          onClick={() => setCurrentPage(number)}>
+                        {number}
+                    </span>
+                ))}
+            </div>
+        ) : null;
+    };    
+
     return (
         <div className='containerP' id="sect-P">
             <div className='rowP'>
@@ -75,6 +103,7 @@ function ProjectSection() {
                     <div className="project-container">
                         {selectedType && renderProjects(selectedType)}
                     </div>
+                    {renderPaginationControls()}
                 </div>
             </div>
         </div>

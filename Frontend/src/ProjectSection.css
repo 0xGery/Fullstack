@@ -56,6 +56,8 @@ h2.project-type-title{
     flex-direction: column;
     align-items: center;
     font-family: monospace;
+    height: 686px;
+    position: relative;
 }
 
 .project-types {
@@ -169,4 +171,28 @@ h2.project-type-title{
     .project-item h3, .project-item p {
         font-size: 4vw;
     }
+}
+
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+}
+
+.page-number {
+    cursor: pointer;
+    padding: 5px;
+    background-color: #292929;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.page-number:hover,
+.page-number.selected {
+    color: #FFD700;
 }
