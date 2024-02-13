@@ -1,1 +1,1 @@
-This Code is used for https://Nocturnode.tech web development.
+This Frontend Code is used for Designning https://Nocturnode.tech webpage
