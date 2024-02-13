@@ -11,7 +11,7 @@ const path = require('path');
 
 const dbHost = '93.188.161.44';
 const dbName = '0xGery';
-const dbPassword = '1Nocturn01';
+const dbPassword = '---';
 const dbUsername = '0xGery'
 const connectionString = `mongodb://${dbUsername}:${encodeURIComponent(dbPassword)}@${dbHost}:27017/${dbName}?authSource=admin`;
 
