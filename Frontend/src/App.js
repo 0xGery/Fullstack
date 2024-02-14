@@ -12,7 +12,7 @@ import ServiceSection from './ServiceSection';
 import TeamSection from './TeamSection';
 import ContactSection from './ContactSection';
 import Privacy from './Privacy';
-import Rust from './Rust';
+// import Rust from './Rust';
 
 function App() {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 680);
@@ -52,9 +52,9 @@ function App() {
                             }/>
                             <Route path="/Rust" element={
                                 <div className="App">
-                                    <Privacy />
+                                    <Rust />
                                 </div>
-                            }/>
+                            }/> 
                         </Routes>
                     )}
                 </div>
