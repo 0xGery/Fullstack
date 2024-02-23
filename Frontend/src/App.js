@@ -50,11 +50,6 @@ function App() {
                                     <Privacy />
                                 </div>
                             }/>
-                            <Route path="/Rust" element={
-                                <div className="App">
-                                    <Rust />
-                                </div>
-                            }/> 
                         </Routes>
                     )}
                 </div>
